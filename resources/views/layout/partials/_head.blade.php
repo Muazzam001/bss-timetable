@@ -29,7 +29,3 @@
 </head>
 
 <body class="antialiased">
-    @inertia
-</body>
-
-</html>
