@@ -14,9 +14,8 @@
         @routes
         @viteReactRefresh
         @vite('resources/js/app.jsx')
-        @inertiaHead
     </head>
     <body class="font-sans antialiased">
-        @inertia
+        <div id="app"></div>
     </body>
 </html>
