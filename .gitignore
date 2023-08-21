@@ -9,6 +9,9 @@
 *.user
 *.userosscache
 *.sln.docstates
+package-lock.json
+composer.lock
+auth.json
 /.idea
 */.idea
 */.idea/*
@@ -29,9 +32,6 @@ npm-debug.log
 yarn-error.log
 /.vscode
 /.fleet
-package-lock.json
-composer.lock
-auth.json
 /dist
 
 # User-specific files (MonoDevelop/Xamarin Studio)

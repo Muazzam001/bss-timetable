@@ -1,4 +1,3 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
@@ -26,10 +25,12 @@ export default {
         function ({ addComponents }) {
             addComponents({
                 '.container': {
-                    '@screen xs': {
-                        // maxWidth: '450px',
+                    '@screen max-xs': {
                         paddingLeft: 0,
                         paddingRight: 0
+                    },
+                    '@screen xs': {
+                        // maxWidth: '450px',
                     },
                     '@screen sm': {
                         maxWidth: '540px',
