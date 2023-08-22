@@ -159,7 +159,6 @@ export default plugin(
                     'h5': ['1.25rem', {lineHeight: '2rem', fontWeight: '500'}],
                     'h6': ['1.125rem', {lineHeight: '1.75rem', fontWeight: '400'}],
                     'h7': ['1rem', {lineHeight: '1.75rem', fontWeight: '400'}],
-
                     '15xl': ['10rem', {lineHeight: '1'}],
                     '14xl': ['9rem', {lineHeight: '1'}],
                     '13xl': ['8rem', {lineHeight: '1'}],

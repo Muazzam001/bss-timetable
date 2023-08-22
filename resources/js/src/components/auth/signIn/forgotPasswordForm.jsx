@@ -39,6 +39,7 @@ const ForgotPasswordForm = ({ className }) => {
         <>
             <div className="card-wrapper ">
                 <div className="flex flex-col gap-y-2 items-center justify-center">
+
                     <h4 className='text-dark/80 text-h5 xl:text-h4 font-semibold font-primary'>Reset your password?</h4>
                     <p className='text-dark/80 text-sm xl:text-md font-primary'>We’ll help you reset it and get back on track.</p>
                 </div>
@@ -66,6 +67,7 @@ const ForgotPasswordForm = ({ className }) => {
                             title="Reset Password"
                             color="sky-blue"
                             className="p-3"
+
                             onClick={handleResetPassword}
                         />
                     </>

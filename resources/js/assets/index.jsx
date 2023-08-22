@@ -11,6 +11,7 @@ import section from "./images/section.png"
 import ArrowDown from "./icons/arrowDown";
 import ArrowUp from "./icons/arrowUp";
 
+
 export const assets = {
     signIn,
     forgotPassword,
@@ -25,3 +26,4 @@ export const assets = {
     ArrowUp,
     section,
 }
+
