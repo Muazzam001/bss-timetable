@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <>
-            <div className='bg-btn-sky-blue w-full'>
+            <div className='bg-sky-blue w-full'>
                 <div className='header-wrapper'>
                     <div className='header-logo'>
                         <Image src={assets.logo} alt={'logo'} />

@@ -5,7 +5,12 @@ import contact from "./images/contact.png";
 import logo from "./images/logo.png";
 import inbox from "./images/check-inbox.png";
 import lock from "./images/lock.svg";
-import envelope from "./images/envelope.svg"
+import envelope from "./images/envelope.svg";
+import plus from "./images/plus.png"
+import section from "./images/section.png"
+import ArrowDown from "./icons/arrowDown";
+import ArrowUp from "./icons/arrowUp";
+
 
 export const assets = {
     signIn,
@@ -16,4 +21,9 @@ export const assets = {
     inbox,
     lock,
     envelope,
+    plus,
+    ArrowDown,
+    ArrowUp,
+    section,
 }
+

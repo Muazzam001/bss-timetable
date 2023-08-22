@@ -7,7 +7,7 @@ import './auth.scss';
 export default function Login() {
 	return (
 		<>
-			<div className='bg-page-bg w-full'>
+			<div className='bg-primary-blue w-full'>
 				<div className="auth-wrapper">
 					<div className="auth-img-wrapper">
 						<Image src={assets.signIn} alt={'Sign In'} />

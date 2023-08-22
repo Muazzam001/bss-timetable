@@ -131,13 +131,19 @@ export default plugin(
                     'legend-done': '#3BC171',
                     'legend-helpful': '#F1C40F',
                     'legend-danger': '#DD325C',
-                    'page-bg': '#79B8FA',
+                    'primary-blue': '#79B8FA',
                     'icon-bg': '#D1E7FF',
                     'input-bg': '#F5F5F5',
-                    'btn-sky-blue': '#4193E5',
-                    'btn-dark-blue': '#175088',
-                    'link': '#16648B',
-                    'gray': '#707070',
+                    'sky-blue': '#4193E5',
+                    'dark-blue': '#175088',
+                    'fade-blue': '#16648B',
+                    'light-gray': "#F7F7F6",
+                    'navy-dark-blue': "#272749",
+                    'light-blue': "#CEE8F5",
+                    'medium-gray': "#E8E8E8",
+                    'dark-gray': "#707070",
+                    'gray-normal': "#F1F2F4"
+
                 },
                 fontFamily: {
                     'primary': ['Poppins', 'Raleway', 'Montserrat', 'Open Sans', 'sans-serif'],
@@ -153,7 +159,6 @@ export default plugin(
                     'h5': ['1.25rem', {lineHeight: '2rem', fontWeight: '500'}],
                     'h6': ['1.125rem', {lineHeight: '1.75rem', fontWeight: '400'}],
                     'h7': ['1rem', {lineHeight: '1.75rem', fontWeight: '400'}],
-
                     '15xl': ['10rem', {lineHeight: '1'}],
                     '14xl': ['9rem', {lineHeight: '1'}],
                     '13xl': ['8rem', {lineHeight: '1'}],

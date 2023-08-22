@@ -39,13 +39,15 @@ const ForgotPasswordForm = ({ className }) => {
         <>
             <div className="card-wrapper ">
                 <div className="flex flex-col gap-y-2 items-center justify-center">
-                    <h4 className='text-dark/80 text-h5 xl:text-h4 font-semibold'>Reset your password?</h4>
-                    <p className='text-dark/80 text-sm xl:text-md'>We’ll help you reset it and get back on track.</p>
+
+                    <h4 className='text-dark/80 text-h5 xl:text-h4 font-semibold font-primary'>Reset your password?</h4>
+                    <p className='text-dark/80 text-sm xl:text-md font-primary'>We’ll help you reset it and get back on track.</p>
                 </div>
 
-                <div className="flex flex-col gap-y-8 xl:gap-y-10">
+                <div className="flex flex-col gap-y-8 xl:gap-y-10 w-full">
                     <>
                         <InputField
+                            rounded={true}
                             className=""
                             icon={assets.envelope}
                             type="email"
@@ -60,16 +62,19 @@ const ForgotPasswordForm = ({ className }) => {
                     {/* Sign In & Forgot Password BUttons */}
                     <>
                         <Button
+                            rounded={true}
                             type="button"
                             title="Reset Password"
-                            className="w-full hover:border-btn-sky-blue bg-btn-sky-blue hover:text-btn-sky-blue"
+                            color="sky-blue"
+                            className="p-3"
+
                             onClick={handleResetPassword}
                         />
                     </>
 
                     <div className='text-center text-md xl:text-base'>
-                        <span className='text-dark/80'> Already have an account? </span>
-                        <NavLink to="/" className='text-link font-semibold cursor-pointer'>Return to Sign In</NavLink>
+                        <span className='text-dark/80 font-primary text-sm'> Already have an account? </span>
+                        <NavLink to="/" className='text-fade-blue font-semibold cursor-pointer font-primary text-sm'>Return to Sign In</NavLink>
                     </div>
                 </div>
             </div>

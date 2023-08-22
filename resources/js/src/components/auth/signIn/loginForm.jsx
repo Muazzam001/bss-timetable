@@ -56,12 +56,13 @@ export default function LoginForm({ className }) {
         <>
             <div className="card-wrapper ">
                 <div className="flex justify-center mb-5 xl:mb-8">
-                    <h4 className="text-dark/80 text-h5 xl:text-h4 font-semibold">Sign In To Beaconhouse</h4>
+                    <h4 className="text-dark/80 text-h5 xl:text-h4 font-semibold font-primary">Sign In To Beaconhouse</h4>
                 </div>
 
                 <div className='w-full flex flex-col gap-y-4 xl:gap-y-6'>
                     <div >
                         <InputField
+                            rounded={true}
                             className="placeholder:text-lg"
                             icon={assets.envelope}
                             type="email"
@@ -75,6 +76,7 @@ export default function LoginForm({ className }) {
 
                     <div>
                         <InputField
+                            rounded={true}
                             className="placeholder:text-lg"
                             icon={assets.lock}
                             type="password"
@@ -97,7 +99,7 @@ export default function LoginForm({ className }) {
 
                         <label
                             htmlFor="remember-me"
-                            className="ml-2 block text-sm text-gray-900">
+                            className="ml-2 block text-sm text-gray-900 font-primary">
                             Remember me
                         </label>
                     </div>
@@ -105,16 +107,20 @@ export default function LoginForm({ className }) {
                     {/* Sign In & Forgot Password Buttons */}
                     <div className="flex flex-col max-xl:gap-y-4 xl:gap-y-6">
                         <Button
+                            rounded={true}
                             type="submit"
                             title="Sign In"
-                            className="w-full hover:border-btn-sky-blue bg-btn-sky-blue hover:text-btn-sky-blue"
+                            color="sky-blue"
                             onClick={handleLogin}
+                            className="p-3"
                         />
 
                         <Button
+                            rounded={true}
                             type="button"
                             title="Forgot Password?"
-                            className="w-full hover:border-btn-dark-blue bg-btn-dark-blue hover:text-btn-dark-blue"
+                            color="dark-blue"
+                            className="p-3"
                             onClick={() => navigate("/forgot-password")}
                         />
                     </div>
