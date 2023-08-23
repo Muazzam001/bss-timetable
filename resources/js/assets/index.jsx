@@ -16,6 +16,8 @@ import teacher from "./images/teacher.png";
 import settings from "./images/settings.png";
 import facilitator from "./images/facilitator.png";
 import classroom from "./images/classroom.png";
+import hamburger from "./images/hamburger.png";
+import close from "./images/close.png";
 
 export const assets = {
     signIn,
@@ -36,4 +38,6 @@ export const assets = {
     settings,
     facilitator,
     classroom,
+    hamburger,
+    close,
 }

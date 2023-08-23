@@ -1,40 +1,28 @@
+import { useState } from "react";
 
-import { useState } from 'react';
-import ArrowDown from '@/assets/icons/arrowDown';
 
 const Accordion = ({ items, title }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [team, setTeam] = useState("");
 
-    const toggleAccordion = () => {
-        setIsOpen(!isOpen);
-    };
-
-    const teamData = items?.map((team, index) => {
+    const teamData = items?.map((teamName, index) => {
         return (
-            <button key={`${index}`} type="button" className="min-w-[110px] rounded-lg p-3 font-primary text-center text-sm text-navy-dark-blue bg-light-gray hover:bg-light-blue">
-                {team}
-            </button>
+            <div key={`${index}`} className='flex items-center justify-center gap-x-5'>
+                <input type="radio" name="radio" id={teamName} className='peer hidden' value={teamName} onChange={(e) => setTeam(e.currentTarget.value)} />
+                <label htmlFor={teamName} className="checkmark peer-checked:bg-light-blue min-w-[110px] rounded-lg p-3 font-primary text-center text-sm text-navy-dark-blue bg-light-gray cursor-pointer">{teamName}</label>
+            </div>
+            // <button key={`${index}`} type="button" className="min-w-[110px] rounded-lg p-3 font-primary text-center text-sm text-navy-dark-blue bg-light-gray hover:bg-light-blue">
+            //     {team}
+            // </button>
         )
     })
 
     return (
             <div className='rounded-md border-[1.5px] border-slate-300'>
-                <h2>
-                    <button
-                        type="button"
-                        className="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 "
-                        onClick={toggleAccordion}
-                    >
-                        <span className='font-primary text-sm'>Accordion Title</span>
-                        <span
-                            className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
-                        >
-                            <ArrowDown className="w-5 h-5" />
-                        </span>
-                    </button>
+            <h2 className='font-primary p-3'>
+                    {title}
                 </h2>
                 <div
-                    className={`transition-all duration-300 ${isOpen ? 'hidden' : 'block'} border-t-[1.5px] border-slate-300`}
+                    className={`border-t-[1.5px] border-slate-300`}
                 >
                     <div className="flex flex-wrap gap-2 p-3">
                         {teamData}

@@ -12,7 +12,7 @@ const InputField = ({ icon, type, name, placeholder, className, value, onChange,
             <div className="relative mt-1">
                 {icon ? (
                     <div className="pointer-events-none absolute inset-y-2 rounded-full left-3 h-9 w-9 flex items-center justify-center p-[5px] bg-icon-bg">
-                        <Image src={icon} alt="input field icon" className='h-5 w-5' />
+                        <Image src={icon} alt="Input field icon" className='h-5 w-5' />
                     </div>
                 ) : null}
                 <input

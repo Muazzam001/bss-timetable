@@ -10,7 +10,7 @@ const ForgotPassword = () => {
             <div className='bg-primary-blue w-full'>
                 <div className="auth-wrapper">
                     <div className="auth-img-wrapper">
-                        <Image src={assets.forgotPassword} alt={'Forgot Password'} />
+                        <Image src={assets.forgotPassword} alt={'Forgot Password icon'} />
                     </div>
 
                     <div className='auth-card-wrapper'>

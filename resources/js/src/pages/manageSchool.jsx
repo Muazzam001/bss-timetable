@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Button from '../shared/button/button';
 import { assets } from '@/assets';
+import { useState } from 'react';
 import Accordion from '../shared/accordion/accordion';
+import Button from '../shared/button/button';
 import Modal from '../shared/modal/modal';
-import Sidebar from '../shared/sidebar/sidebar';
 
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +15,6 @@ const ManageSchool = () => {
         setIsModalOpen(false);
     };
 
-
     const cluster = ["Gulber Lahore", "Shadman", "Johar Town", "Zaman Park", "Azadi Chowk", "Badshahi Masjid Lahore"]
     return (
         <>
@@ -26,7 +24,59 @@ const ManageSchool = () => {
             </div>
 
             <div className="xl:px-30 lg:px-10 px-5">
-                <div className='md:flex md:flex-wrap justify-between'>
+
+                <div className='grid lg:grid-cols-2 grid-cols-1 grid-flow-row'>
+                    <div className="w-full p-4">
+                        <Button
+                            icon={assets.plus}
+                            rounded={false}
+                            type="button"
+                            title="Add Region"
+                            color={"dark-blue"}
+                            className="font-medium text-sm mb-3 min-w-[130px] justify-start"
+                            onClick={openModal}
+                        />
+                        <Accordion items={cluster} title="Select Region" />
+                    </div>
+                    {/* <div className="w-full p-4">
+                        <Button
+                            icon={assets.plus}
+                            rounded={false}
+                            type="button"
+                            title="Add Clustor"
+                            color={"dark-blue"}
+                            className="font-medium text-sm mb-3"
+                            onClick={openModal}
+                        />
+                        <Accordion items={cluster} title="Select Clustor" />
+                    </div>
+                    <div className="w-full p-4">
+                        <Button
+                            icon={assets.plus}
+                            rounded={false}
+                            type="button"
+                            title="Add Region"
+                            color={"dark-blue"}
+                            className="font-medium text-sm mb-3 min-w-[130px] justify-start"
+                            onClick={openModal}
+                        />
+                        <Accordion items={cluster} title="Select Region" />
+                    </div>
+                    <div className="w-full p-4">
+                        <Button
+                            icon={assets.plus}
+                            rounded={false}
+                            type="button"
+                            title="Add Clustor"
+                            color={"dark-blue"}
+                            className="font-medium text-sm mb-3"
+                            onClick={openModal}
+                        />
+                        <Accordion items={cluster} title="Select Clustor" />
+                    </div> */}
+                </div>
+
+                {/* <div className='md:flex md:flex-wrap justify-between'>
                     <div className="w-full lg:w-[45%] md:w-1/2 p-4">
                         <Button
                             icon={assets.plus}
@@ -35,6 +85,7 @@ const ManageSchool = () => {
                             title="Add Region"
                             color={"dark-blue"}
                             className="font-medium text-sm mb-3 min-w-[130px] justify-start"
+                            onClick={openModal}
                         />
                         <Accordion items={cluster} title="Select Region" />
                     </div>
@@ -46,12 +97,13 @@ const ManageSchool = () => {
                             title="Add Clustor"
                             color={"dark-blue"}
                             className="font-medium text-sm mb-3"
+                            onClick={openModal}
                         />
                         <Accordion items={cluster} title="Select Clustor" />
                     </div>
-                </div>
+                </div> */}
 
-                <div className='md:flex md:flex-wrap justify-between'>
+                {/* <div className='md:flex md:flex-wrap justify-between'>
                     <div className="w-full lg:w-[45%] md:w-1/2 p-4">
                         <Button
                             icon={assets.plus}
@@ -60,6 +112,7 @@ const ManageSchool = () => {
                             title="Add Branch"
                             color={"dark-blue"}
                             className="font-medium text-sm mb-3"
+                            onClick={openModal}
                         />
                         <Accordion items={cluster} title="Select Branch" />
                     </div>
@@ -71,10 +124,11 @@ const ManageSchool = () => {
                             title="Add Level"
                             color={"dark-blue"}
                             className="font-medium text-sm mb-3"
+                            onClick={openModal}
                         />
                         <Accordion items={cluster} title="Select Level" />
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className='flex justify-center my-20'>
@@ -84,11 +138,9 @@ const ManageSchool = () => {
                     title="Finished & Next"
                     color={"dark-blue"}
                     className="w-2/5 p-3"
-                    onClick={openModal}
                 />
             </div>
             <Modal isOpen={isModalOpen} onClose={closeModal} />
-            <Sidebar />
         </>
     )
 }

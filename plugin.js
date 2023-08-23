@@ -135,6 +135,7 @@ export default plugin(
                     'icon-bg': '#D1E7FF',
                     'input-bg': '#F5F5F5',
                     'sky-blue': '#4193E5',
+                    'lightsky-blue': '#D1E5F9',
                     'dark-blue': '#175088',
                     'fade-blue': '#16648B',
                     'light-gray': "#F7F7F6",

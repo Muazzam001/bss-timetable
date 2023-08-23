@@ -24,7 +24,7 @@ const Header = () => {
             <div className='bg-sky-blue w-full'>
                 <div className='header-wrapper'>
                     <div className='header-logo'>
-                        <Image src={assets.logo} alt={'logo'} />
+                        <Image src={assets.logo} alt={'Application Logo'} />
                     </div>
 
                     <div className='flex items-center'>
