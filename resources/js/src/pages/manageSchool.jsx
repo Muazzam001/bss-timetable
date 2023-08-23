@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Button from '../components/shared/button';
+import Button from '../shared/button/button';
 import { assets } from '@/assets';
-import Accordion from '../components/shared/accordion';
-import InputField from '../components/shared/inputField';
-import Image from '../components/shared/image';
-import Modal from '../components/shared/modal/modal';
+import Accordion from '../shared/accordion/accordion';
+import Modal from '../shared/modal/modal';
+import Sidebar from '../shared/sidebar/sidebar';
 
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -89,6 +88,7 @@ const ManageSchool = () => {
                 />
             </div>
             <Modal isOpen={isModalOpen} onClose={closeModal} />
+            <Sidebar />
         </>
     )
 }

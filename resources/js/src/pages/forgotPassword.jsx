@@ -1,7 +1,7 @@
 import React from 'react';
 import { assets } from '@/assets';
-import ForgotPasswordForm from '@/src/components/auth/signIn/forgotPasswordForm';
-import Image from '@/src/components/shared/image';
+import ForgotPasswordForm from '@/src/components/auth/forgotPasswordForm';
+import Image from '@/src/shared/image/image';
 import './auth.scss';
 
 const ForgotPassword = () => {

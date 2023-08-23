@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../button';
-import Image from '../image';
+import Button from '../button/button';
+import Image from '../image/image';
 import { assets } from '@/assets';
-import InputField from '../inputField';
+import InputField from '../input/inputField';
 import ArrowDown from '@/assets/icons/arrowDown';
 
 const Modal = ({ isOpen, onClose }) => {

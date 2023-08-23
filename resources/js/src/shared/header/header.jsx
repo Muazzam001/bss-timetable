@@ -1,7 +1,7 @@
 import React from 'react';
 import { assets } from '@/assets';
 import "./header.scss"
-import Image from '../image';
+import Image from '../image/image';
 
 const Header = () => {
     const headerIcons = (title, icon) => {

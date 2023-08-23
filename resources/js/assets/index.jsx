@@ -10,7 +10,12 @@ import plus from "./images/plus.png"
 import section from "./images/section.png"
 import ArrowDown from "./icons/arrowDown";
 import ArrowUp from "./icons/arrowUp";
-
+import whole from "./images/whole.png";
+import textBooks from "./images/text-books.png";
+import teacher from "./images/teacher.png";
+import settings from "./images/settings.png";
+import facilitator from "./images/facilitator.png";
+import classroom from "./images/classroom.png";
 
 export const assets = {
     signIn,
@@ -25,5 +30,10 @@ export const assets = {
     ArrowDown,
     ArrowUp,
     section,
+    whole,
+    textBooks,
+    teacher,
+    settings,
+    facilitator,
+    classroom,
 }
-
