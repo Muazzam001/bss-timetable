@@ -47,7 +47,7 @@ export default function LoginForm({ className }) {
             return;
         } else {
             // Call Login API
-            navigate('/forgot-password');
+            navigate('/manage-school');
         }
     }
 
@@ -81,7 +81,7 @@ export default function LoginForm({ className }) {
                             icon={assets.lock}
                             type="password"
                             name="password"
-                            placeholder="****"
+                            placeholder="********"
                             value={form.password}
                             onChange={(e) => handleChange(e.target.value, "password")}
                             error={error.password}
