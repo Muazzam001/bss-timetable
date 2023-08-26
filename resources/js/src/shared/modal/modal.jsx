@@ -8,10 +8,10 @@ const Modal = ({ isOpen, onClose }) => {
     return (
         <>
             {isOpen && (
-                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40" onClick={onClose}/>
+                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40 overflow-y-hidden" onClick={onClose}/>
             )}
 
-            <div className={`fixed top-0 right-0 h-full bg-gray-normal w-[55%] border border-gray-300 transform transition-transform ease-in-out duration-700 bg-gray-normal ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
+            <div className={`fixed top-0 right-0 h-full overflow-y-auto bg-gray-normal w-[55%] border border-gray-300 transform transition-transform ease-in-out duration-700 bg-gray-normal ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
 
                 <div className='bg-white py-5 px-3 border-y border-slate-300 cursor-pointer' onClick={onClose}>
                     <ArrowLeft className="!w-6 !h-6" />
