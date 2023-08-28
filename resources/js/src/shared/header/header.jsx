@@ -1,7 +1,7 @@
 import React from 'react';
 import { assets } from '@/assets';
 import "./header.scss"
-import Image from '../image';
+import Image from '../image/image';
 
 const Header = () => {
     const headerIcons = (title, icon) => {
@@ -21,13 +21,13 @@ const Header = () => {
 
     return (
         <>
-            <div className='bg-sky-blue w-full'>
+            <div className='bg-blue-btn-normal w-full'>
                 <div className='header-wrapper'>
                     <div className='header-logo'>
-                        <Image src={assets.logo} alt={'logo'} />
+                        <Image src={assets.logo} alt={'Application Logo'} />
                     </div>
 
-                    <div className='flex items-center'>
+                    <div className='flex items-center float-right'>
                         {headerIcons("Contact US", assets.contact)}
                         {headerIcons("FAQ's", assets.FAQs)}
                     </div>

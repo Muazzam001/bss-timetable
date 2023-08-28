@@ -132,18 +132,31 @@ export default plugin(
                     'legend-helpful': '#F1C40F',
                     'legend-danger': '#DD325C',
                     'primary-blue': '#79B8FA',
-                    'icon-bg': '#D1E7FF',
-                    'input-bg': '#F5F5F5',
-                    'sky-blue': '#4193E5',
-                    'dark-blue': '#175088',
-                    'fade-blue': '#16648B',
-                    'light-gray': "#F7F7F6",
-                    'navy-dark-blue': "#272749",
-                    'light-blue': "#CEE8F5",
-                    'medium-gray': "#E8E8E8",
-                    'dark-gray': "#707070",
-                    'gray-normal': "#F1F2F4"
 
+                    // Input Background Colors
+                    'gray-bg-input': "#F7F7F6",
+                    'gray-bg-body': "#F3F2EF",
+                    'blue-bg-input': "#CEE8F5",
+                    'gray-bg-tooltip': "#C8C8C8",
+                    'blue-bg-icon': '#D1E7FF',
+                    'blue-bg-card': "#F4F8F9",
+
+                    // Border Colors
+                    'gray-b-input': "#707070",
+                    'gray-b-card': "#E9EBF0",
+                    'blue-b-input': "#1D5891",
+
+                    //Button Colors
+                    'blue-btn-normal': '#4193E5',
+                    'blue-btn-medium': '#175088',
+                    'gray-btn-light': '#E8E8E8',
+
+
+                    // Text Colors
+                    'gray-text-light': "#292724",
+                    'blue-text-normal': "#16648B",
+                    'blue-text-medium': "#1E5891",
+                    'blue-text-dark': "#272749",
                 },
                 fontFamily: {
                     'primary': ['Poppins', 'Raleway', 'Montserrat', 'Open Sans', 'sans-serif'],

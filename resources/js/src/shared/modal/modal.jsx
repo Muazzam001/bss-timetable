@@ -1,30 +1,29 @@
-import React from 'react';
-import Button from '../button';
-import Image from '../image';
 import { assets } from '@/assets';
-import InputField from '../inputField';
-import ArrowDown from '@/assets/icons/arrowDown';
+import ArrowLeft from '@/assets/icons/arrowLeft';
+import Button from '../button/button';
+import Image from '../image/image';
+import InputField from '../input/inputField';
 
 const Modal = ({ isOpen, onClose }) => {
     return (
         <>
             {isOpen && (
-                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40" onClick={onClose}/>
+                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40 overflow-y-hidden" onClick={onClose}/>
             )}
 
-            <div className={`fixed top-0 right-0 h-full bg-gray-normal w-[55%] bg-white border border-gray-300 transform transition-transform ease-in-out duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
+            <div className={`fixed top-0 right-0 h-full overflow-y-auto bg-gray-bg-body w-[55%] border border-gray-300 transform transition-transform ease-in-out duration-700 bg-gray-normal ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
 
                 <div className='bg-white py-5 px-3 border-y border-slate-300 cursor-pointer' onClick={onClose}>
-                    <ArrowDown className="!w-6 !h-6" rotate="90" />
+                    <ArrowLeft className="!w-6 !h-6" />
                 </div>
 
                 <div className='my-5 ml-16'>
                     <h3 className='text-xl text-bold font-primary'>Manage School</h3>
                 </div>
 
-                <div className="flex flex-col gap-y-14 bg-white m-8 border rounded-md border-gray-300 p-4 pt-10">
+                <div className="flex flex-col gap-y-14 h-[calc(100vh-170px)] bg-white my-8 lg:mx-8 mx-2 border rounded-md border-gray-300 p-4 pt-10 overflow-y-auto">
                     <div className='flex gap-x-3 items-center'>
-                        <span><Image src={assets.section} alt="input field icon" className='h-9 w-9' /></span>
+                        <span><Image src={assets.section} alt="Input field icon" className='h-9 w-9' /></span>
                         <h2 className="leading-7 text-2xl font-primary">Add Section</h2>
                     </div>
 
@@ -97,20 +96,19 @@ const Modal = ({ isOpen, onClose }) => {
                     <div className='flex flex-wrap gap-5 justify-end pr-6 mb-16 mt-6'>
                         <Button
                             title="Cancel"
-                            color="dark-blue"
                             rounded={true}
                             hover={false}
-                            className="!px-8 !bg-medium-gray !text-black !text-sm"
+                            className="!px-8 !bg-gray-btn-light !text-black !text-sm"
                         />
                         <Button
                             title="Save and Add More"
-                            color="dark-blue"
+                            color="blue-btn-medium"
                             rounded={true}
                             className="!px-8 !text-sm"
                         />
                         <Button
                             title="Save and Finished"
-                            color="dark-blue"
+                            color="blue-btn-medium"
                             rounded={true}
                             className="!px-8 !text-sm"
                         />
