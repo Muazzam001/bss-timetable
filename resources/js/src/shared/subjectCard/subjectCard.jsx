@@ -16,11 +16,13 @@ const SubjectCard = () => {
                         <p className="text-md text-gray-500 font-primary">MATHS</p>
                     </div>
                 </div>
+
                 <div>
-                    <span></span>
                     <div className='flex gap-x-3'>
-                        <span className='border-[1.5px] border-gray-medium rounded-full p-1'><Edit className="!w-8 !h-8"/></span>
-                        <span className='border-[1.5px] border-gray-medium rounded-full p-1'><Delete className="!w-8 !h-8"/></span>
+                        <span className='border-[1.5px] border-gray-medium rounded-full p-1'><Edit
+                            className="!w-8 !h-8"/></span>
+                        <span className='border-[1.5px] border-gray-medium rounded-full p-1'><Delete
+                            className="!w-8 !h-8"/></span>
                     </div>
                 </div>
             </div>
