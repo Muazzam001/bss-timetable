@@ -1,5 +1,5 @@
-import { assets } from '@/assets';
-import { useState } from 'react';
+import {assets} from '@/assets';
+import {useState} from 'react';
 import Accordion from '../shared/accordion/accordion';
 import Button from '../shared/button/button';
 import Modal from '../shared/modal/modal';
@@ -28,8 +28,8 @@ const ManageSchool = () => {
 
     // Handle Change team value
     const handleChange = (target) => {
-        const { name, value } = target;
-        setTeam((prevTeam) => ({ ...prevTeam, [name]: value }))
+        const {name, value} = target;
+        setTeam((prevTeam) => ({...prevTeam, [name]: value}))
     }
 
     const region = ["ROC", "RON", "ROS"]
@@ -44,13 +44,15 @@ const ManageSchool = () => {
 
                     <div className=''>
                         <h3 className='text-h3 font-primary text-center text-blue-dark1'>Welcome to Beaconhouse</h3>
-                        <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from beacon house team</p>
+                        <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from
+                            beacon house team</p>
                     </div>
 
                     <div>
 
-                        <div className={`grid grid-flow-row gap-y-10 xl:gap-x-30 lg:gap-x-10 gap-x-5 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
-                            <div className="w-full p-4">
+                        <div
+                            className={`grid grid-flow-row gap-y-8 lg:gap-y-12 gap-x-5 md:gap-x-10 lg:gap-x-15 3xl:gap-x-20 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
+                            <div className="w-full">
                                 <Button
                                     icon={assets.plus}
                                     rounded={false}
@@ -60,6 +62,7 @@ const ManageSchool = () => {
                                     className="font-medium text-sm mb-3 min-w-[130px] justify-start"
                                     onClick={openModal}
                                 />
+
                                 <Accordion
                                     items={region}
                                     title="Select Region"
@@ -69,7 +72,7 @@ const ManageSchool = () => {
                             </div>
 
                             {team.region !== "" ? (
-                                <div className="w-full p-4">
+                                <div className="w-full">
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -89,7 +92,7 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.cluster !== "" ? (
-                                <div className="w-full p-4">
+                                <div className="w-full">
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -109,7 +112,7 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.city !== "" ? (
-                                <div className="w-full p-4">
+                                <div className="w-full">
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -129,7 +132,7 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.branch !== "" ? (
-                                <div className="w-full p-4">
+                                <div className="w-full">
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -143,7 +146,7 @@ const ManageSchool = () => {
                                         items={level}
                                         title="Select Level"
                                         name="level"
-                                    // onChange={handleChange}
+                                        // onChange={handleChange}
                                     />
                                 </div>
                             ) : null}
@@ -156,9 +159,10 @@ const ManageSchool = () => {
                                 type="button"
                                 title="Finished & Next"
                                 color={"blue-dark2"}
-                                className="px-18 p-3 xl:mr-30 lg:mr-10 mr-5"
+                                className="px-18 py-3"
                             />
                         </div>
+
                         <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
                     </div>
                 </div>

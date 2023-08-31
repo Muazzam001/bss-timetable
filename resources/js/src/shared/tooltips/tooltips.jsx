@@ -11,7 +11,7 @@ const Tooltips = ({title, children}) => {
                 componentsProps={{
                     tooltip: {
                         sx: {
-                            bgcolor: '#C8C8C8',
+                            bgColor: '#C8C8C8',
                             border: 1,
                             color: "black",
                             borderColor: "black",
