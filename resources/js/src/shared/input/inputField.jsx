@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from '../image/image';
 
+
 const InputField = ({ icon, type, name, placeholder, className, value, onChange, error, rounded, htmlFor, label, disabled }) => {
+
     return (
         <>
             {label ? (

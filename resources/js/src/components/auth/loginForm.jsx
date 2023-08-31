@@ -88,7 +88,7 @@ export default function LoginForm({ className }) {
                         />
                     </div>
 
-                    {/* Remember me */}
+                    {/* Remember me */}\
                     <label htmlFor="remember-me" className="flex items-center ml-4">
                         <div className="border border-blue-medium1 w-5 h-5 rounded cursor-pointer z-50">
                             <input
@@ -105,6 +105,7 @@ export default function LoginForm({ className }) {
                             Remember me
                         </span>
                     </label>
+
 
                     {/* Sign In & Forgot Password Buttons */}
                     <div className="flex flex-col max-xl:gap-y-4 xl:gap-y-6">

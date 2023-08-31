@@ -24,6 +24,7 @@ import modules from "./images/modules.png";
 import subject from "./images/subject.png";
 import teacher2 from "./images/teacher2.png";
 import Edit from "./icons/edit"
+import close from "./images/close.png";
 
 export const assets = {
     signIn,
@@ -46,6 +47,7 @@ export const assets = {
     classroom,
     hamburger,
     close,
+
     classes,
     classroom2,
     home,
@@ -53,4 +55,5 @@ export const assets = {
     subject,
     teacher2,
     Edit,
+
 }

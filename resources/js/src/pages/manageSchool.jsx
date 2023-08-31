@@ -5,6 +5,9 @@ import Button from '../shared/button/button';
 import Modal from '../shared/modal/modal';
 import SubjectCard from '../shared/subjectCard/subjectCard';
 
+import InputSelect from '../shared/inputSelect/inputSelect';
+
+
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -157,7 +160,6 @@ const ManageSchool = () => {
                             />
                         </div>
                         <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
-
                     </div>
                 </div>
             </div>

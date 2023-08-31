@@ -110,12 +110,14 @@ const Modal = ({ isOpen, onClose, team }) => {
                             hover={false}
                             className="!px-8 !bg-gray-medium !text-black !text-sm"
                         />
+                        
                         <Button
                             title="Save and Add More"
                             color="blue-dark2"
                             rounded={true}
                             className="!px-8 !text-sm"
                         />
+                        
                         <Button
                             title="Save and Finished"
                             color="blue-dark2"

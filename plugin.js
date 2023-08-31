@@ -140,8 +140,7 @@ export default plugin(
                     'blue-medium2': "#5D93C9",
                     'blue-dark1': "#16648B",
                     'blue-dark2': "#175088",
-
-
+                  
                     // Gray
                     'gray-light': "#F7F7F6",
                     'gray-light-yellowish': "#F3F2EF",
@@ -149,6 +148,7 @@ export default plugin(
                     'gray-medium': "#D4D4D4",
                     'gray-dark1': "#707070",
                     'gray-dark2': "#C8C8C8",
+
                 },
                 fontFamily: {
                     'primary': ['Poppins', 'Raleway', 'Montserrat', 'Open Sans', 'sans-serif'],

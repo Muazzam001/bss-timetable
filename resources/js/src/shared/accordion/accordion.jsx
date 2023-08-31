@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 const Accordion = ({ items, title, name, onChange }) => {
 
     const teamData = items?.map((teamName, index) => {
@@ -17,9 +16,7 @@ const Accordion = ({ items, title, name, onChange }) => {
             <h2 className='font-primary p-3'>
                     {title}
                 </h2>
-                <div
-                    className={`border-t-[1.5px] border-gray-medium`}
-                >
+                <div className={`border-t-[1.5px] border-gray-medium`}>
                     <div className="flex flex-wrap gap-2 p-3">
                         {teamData}
                     </div>
