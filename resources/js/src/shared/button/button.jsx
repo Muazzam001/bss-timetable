@@ -3,14 +3,16 @@ import Image from '../image/image';
 import "./button.css";
 
 const Button = ({ className, title, type, onClick, color, icon, rounded, hover }) => {
-  const primaryBlue = "hover:border-blue-btn-normal bg-blue-btn-normal hover:text-blue-btn-normal hover:bg-transparent"
-  const darkBlue = "hover:border-blue-btn-medium bg-blue-btn-medium hover:text-blue-btn-medium hover:bg-transparent"
+
+  const primaryBlue = "hover:border-blue-medium1 bg-blue-medium1 hover:text-blue-medium1 hover:bg-transparent"
+  const darkBlue = "hover:border-blue-dark2 bg-blue-dark2 hover:text-blue-dark2 hover:bg-transparent"
   const black = "hover:border-black bg-black hover:text-black hover:bg-transparent"
 
   let buttonColor;
-  if (color === "blue-btn-normal") {
+  if (color === "blue-medium1") {
     buttonColor = primaryBlue;
-  } else if (color === "blue-btn-medium") {
+  } else if (color === "blue-dark2") {
+
     buttonColor = darkBlue
   } else if (color === "black") {
     buttonColor = black

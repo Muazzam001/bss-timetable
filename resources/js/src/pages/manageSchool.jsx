@@ -3,7 +3,10 @@ import { useState } from 'react';
 import Accordion from '../shared/accordion/accordion';
 import Button from '../shared/button/button';
 import Modal from '../shared/modal/modal';
+import SubjectCard from '../shared/subjectCard/subjectCard';
+
 import InputSelect from '../shared/inputSelect/inputSelect';
+
 
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +22,6 @@ const ManageSchool = () => {
     const openModal = () => {
         setIsModalOpen(true);
     };
-
     const closeModal = () => {
         setIsModalOpen(false);
     };
@@ -41,8 +43,8 @@ const ManageSchool = () => {
                 <div className='flex flex-col gap-10 py-12'>
 
                     <div className=''>
-                        <h3 className='text-h3 font-primary text-center'>Welcome to Beaconhouse</h3>
-                        <p className='text-center font-primary text-sm text-dark-gray'>Please provide content from beacon house team</p>
+                        <h3 className='text-h3 font-primary text-center text-blue-dark1'>Welcome to Beaconhouse</h3>
+                        <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from beacon house team</p>
                     </div>
 
                     <div>
@@ -54,7 +56,7 @@ const ManageSchool = () => {
                                     rounded={false}
                                     type="button"
                                     title="Add Region"
-                                    color={"blue-btn-medium"}
+                                    color={"blue-dark2"}
                                     className="font-medium text-sm mb-3 min-w-[130px] justify-start"
                                     onClick={openModal}
                                 />
@@ -73,7 +75,7 @@ const ManageSchool = () => {
                                         rounded={false}
                                         type="button"
                                         title="Add Cluster"
-                                        color={"blue-btn-medium"}
+                                        color={"blue-dark2"}
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
@@ -93,7 +95,7 @@ const ManageSchool = () => {
                                         rounded={false}
                                         type="button"
                                         title="Add City"
-                                        color={"blue-btn-medium"}
+                                        color={"blue-dark2"}
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
@@ -113,7 +115,7 @@ const ManageSchool = () => {
                                         rounded={false}
                                         type="button"
                                         title="Add Branch"
-                                        color={"blue-btn-medium"}
+                                        color={"blue-dark2"}
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
@@ -133,7 +135,7 @@ const ManageSchool = () => {
                                         rounded={false}
                                         type="button"
                                         title="Add Level"
-                                        color={"blue-btn-medium"}
+                                        color={"blue-dark2"}
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
@@ -153,12 +155,11 @@ const ManageSchool = () => {
                                 rounded={true}
                                 type="button"
                                 title="Finished & Next"
-                                color={"blue-btn-medium"}
+                                color={"blue-dark2"}
                                 className="px-18 p-3 xl:mr-30 lg:mr-10 mr-5"
                             />
                         </div>
-                        <Modal isOpen={isModalOpen} onClose={closeModal} />
-
+                        <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
                     </div>
                 </div>
             </div>

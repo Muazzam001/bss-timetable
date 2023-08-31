@@ -15,6 +15,7 @@ const Sidebar = () => {
 
     const handleSideBar = () => {
         setOpen(!open)
+
         console.log(open);
     }
 

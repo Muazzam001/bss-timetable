@@ -64,15 +64,15 @@ const ForgotPasswordForm = ({ className }) => {
                             rounded={true}
                             type="button"
                             title="Reset Password"
-                            color="blue-btn-normal"
+                            color="blue-dark2"
                             className="p-3"
                             onClick={handleResetPassword}
                         />
                     </>
 
                     <div className='text-center text-md xl:text-base'>
-                        <span className='text-dark/80 font-primary text-sm'> Already have an account? </span>
-                        <NavLink to="/" className='text-fade-blue font-semibold cursor-pointer font-primary text-sm'>Return to Sign In</NavLink>
+                        <span className='text-gray-dark1 font-primary text-sm'> Already have an account? </span>
+                        <NavLink to="/" className='text-blue-dark1 font-semibold cursor-pointer font-primary text-sm'>Return to Sign In</NavLink>
                     </div>
                 </div>
             </div>

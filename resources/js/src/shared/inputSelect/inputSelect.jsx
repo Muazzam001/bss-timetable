@@ -9,6 +9,7 @@ import { styled } from '@mui/material/styles';
 
 const InputSelect = ({ options, className, defaultValue, setState, value, width }) => {
     console.log(width);
+
     const BootstrapInput = styled(InputBase)(({ theme }) => ({
         'label + &': {
             marginTop: theme.spacing(3),

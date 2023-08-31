@@ -14,7 +14,7 @@ const ResetCard = ({ className }) => {
                         If it doesn’t show up soon, check your spam folder.</p>
                 </div>
 
-                <Link className='text-fade-blue text-sm cursor-pointer text-center mx-auto font-primary'>Resend
+                <Link className='text-blue-dark1 text-sm cursor-pointer text-center mx-auto font-primary'>Resend
                     email</Link>
 
                 <div className=" flex flex-col gap-y-5 w-full">
@@ -23,7 +23,7 @@ const ResetCard = ({ className }) => {
                         type="button"
                         onClick={() => navigate("/")}
                         title="Back to Sign In"
-                        color="blue-btn-normal"
+                        color="blue-dark2"
                         className="p-3"
                     />
                 </div>

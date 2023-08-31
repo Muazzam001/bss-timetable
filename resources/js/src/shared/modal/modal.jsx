@@ -4,14 +4,14 @@ import Button from '../button/button';
 import Image from '../image/image';
 import InputField from '../input/inputField';
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, team }) => {
     return (
         <>
             {isOpen && (
-                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40 overflow-y-hidden" onClick={onClose}/>
+                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40 overflow-y-hidden" onClick={onClose} />
             )}
 
-            <div className={`fixed top-0 right-0 h-full overflow-y-auto bg-gray-bg-body w-[55%] border border-gray-300 transform transition-transform ease-in-out duration-700 bg-gray-normal ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
+            <div className={`fixed top-0 right-0 h-full overflow-y-auto w-[55%] border border-gray-medium transform transition-transform ease-in-out duration-700 bg-gray-light-bluish ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
 
                 <div className='bg-white py-5 px-3 border-y border-slate-300 cursor-pointer' onClick={onClose}>
                     <ArrowLeft className="!w-6 !h-6" />
@@ -28,69 +28,79 @@ const Modal = ({ isOpen, onClose }) => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-6">
-                        <div className="sm:col-span-3">
-                            <div className="mt-2">
-                                <InputField
-                                    type="text"
-                                    htmlFor="region"
-                                    name="region"
-                                    id="region"
-                                    label="Select Region"
-                                    className="!p-3"
-                                    placeholder="Select Region..."
-                                // value={}
-                                // onChange={}
-                                />
+                            <div className="sm:col-span-3">
+                                <div className="mt-2">
+                                    <InputField
+                                        type="text"
+                                        htmlFor="region"
+                                        name="region"
+                                        id="region"
+                                        label="Select Region"
+                                        className="!p-3"
+                                        placeholder="Select Region..."
+                                        disabled={team.region !== ""}
+                                    // value={}
+                                    // onChange={}
+                                    />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="sm:col-span-3">
-                            <div className="mt-2">
-                                <InputField
-                                    type="text"
-                                    htmlFor="cluster"
-                                    name="cluster"
-                                    id="cluster"
-                                    label="Select Cluster"
-                                    placeholder="Select Cluster..."
-                                    className="!p-3"
-                                // value={ }
-                                // onChange={ }
-                                />
+                        {team.region !== "" ? (
+                            <div className="sm:col-span-3">
+                                <div className="mt-2">
+                                    <InputField
+                                        type="text"
+                                        htmlFor="cluster"
+                                        name="cluster"
+                                        id="cluster"
+                                        label="Select Cluster"
+                                        placeholder="Select Cluster..."
+                                        className="!p-3"
+                                        disabled={team.region !== "" && team.cluster !== ""}
+                                    // value={ }
+                                    // onChange={ }
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        ) : null}
 
-                        <div className="sm:col-span-3">
-                            <div className="mt-2">
-                                <InputField
-                                    type="text"
-                                    htmlFor="Branch"
-                                    name="Branch"
-                                    id="Branch"
-                                    label="Select Branch"
-                                    placeholder="Select Branch..."
-                                    className="!p-3"
-                                // value={ }
-                                // onChange={ }
-                                />
+                        {team.region !== "" && team.cluster !== "" ? (
+                            <div className="sm:col-span-3">
+                                <div className="mt-2">
+                                    <InputField
+                                        type="text"
+                                        htmlFor="city"
+                                        name="city"
+                                        id="city"
+                                        label="Select City"
+                                        placeholder="Select City..."
+                                        className="!p-3"
+                                        disabled={team.region !== "" && team.cluster !== "" && team.city !== ""}
+                                    // value={ }
+                                    // onChange={ }
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        ) : null}
 
-                        <div className="sm:col-span-3">
-                            <div className="mt-2">
-                                <InputField
-                                    type="text"
-                                    htmlFor="section"
-                                    name="section"
-                                    id="section"
-                                    label="Select Section"
-                                    placeholder="Select Section..."
-                                    className="!p-3"
-                                // value={ }
-                                // onChange={ }
-                                />
+                        {team.region !== "" && team.cluter !== "" && team.city !== ""? (
+                            <div className="sm:col-span-3">
+                                <div className="mt-2">
+                                    <InputField
+                                        type="text"
+                                        htmlFor="branch"
+                                        name="branch"
+                                        id="branch"
+                                        label="Select Section"
+                                        placeholder="Select Section..."
+                                        className="!p-3"
+                                        disabled={team.region !== "" && team.cluster !== "" && team.city !== "" && team.branch !== ""}
+                                    // value={ }
+                                    // onChange={ }
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        ) : null}
                     </div>
 
                     <div className='flex flex-wrap gap-5 justify-end pr-6 mb-16 mt-6'>
@@ -98,17 +108,19 @@ const Modal = ({ isOpen, onClose }) => {
                             title="Cancel"
                             rounded={true}
                             hover={false}
-                            className="!px-8 !bg-gray-btn-light !text-black !text-sm"
+                            className="!px-8 !bg-gray-medium !text-black !text-sm"
                         />
+                        
                         <Button
                             title="Save and Add More"
-                            color="blue-btn-medium"
+                            color="blue-dark2"
                             rounded={true}
                             className="!px-8 !text-sm"
                         />
+                        
                         <Button
                             title="Save and Finished"
-                            color="blue-btn-medium"
+                            color="blue-dark2"
                             rounded={true}
                             className="!px-8 !text-sm"
                         />
