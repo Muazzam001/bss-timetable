@@ -1,6 +1,6 @@
 import React from "react";
 import AppRoutes from "@/src/appRoutes.jsx";
-import Header from "./components/shared/header/header";
+import Header from "./shared/header/header";
 
 export default function Index() {
 	return(

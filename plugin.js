@@ -132,17 +132,22 @@ export default plugin(
                     'legend-helpful': '#F1C40F',
                     'legend-danger': '#DD325C',
                     'primary-blue': '#79B8FA',
-                    'icon-bg': '#D1E7FF',
-                    'input-bg': '#F5F5F5',
-                    'sky-blue': '#4193E5',
-                    'dark-blue': '#175088',
-                    'fade-blue': '#16648B',
-                    'light-gray': "#F7F7F6",
-                    'navy-dark-blue': "#272749",
-                    'light-blue': "#CEE8F5",
-                    'medium-gray': "#E8E8E8",
-                    'dark-gray': "#707070",
-                    'gray-normal': "#F1F2F4"
+
+                    // Blue
+                    'blue-light1': "#CEE8F5",
+                    'blue-light2': "#D1E7FF",
+                    'blue-medium1': "#4193E5",
+                    'blue-medium2': "#5D93C9",
+                    'blue-dark1': "#16648B",
+                    'blue-dark2': "#175088",
+                  
+                    // Gray
+                    'gray-light': "#F7F7F6",
+                    'gray-light-yellowish': "#F3F2EF",
+                    'gray-light-bluish': "#F1F2F4",
+                    'gray-medium': "#D4D4D4",
+                    'gray-dark1': "#707070",
+                    'gray-dark2': "#C8C8C8",
 
                 },
                 fontFamily: {
