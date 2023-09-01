@@ -12,6 +12,7 @@ const Tooltips = ({title, children}) => {
                     tooltip: {
                         sx: {
                             bgColor: '#C8C8C8',
+
                             border: 1,
                             color: "black",
                             borderColor: "black",
@@ -29,3 +30,4 @@ const Tooltips = ({title, children}) => {
 }
 
 export default Tooltips
+

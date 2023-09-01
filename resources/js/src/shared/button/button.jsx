@@ -32,5 +32,5 @@ const Button = ({ className, title, type, onClick, color, icon, rounded, hover }
   )
 
 }
-
 export default Button
+

@@ -1,22 +1,20 @@
-import {assets} from '@/assets';
+import { assets } from '@/assets';
 import ArrowLeft from '@/assets/icons/arrowLeft';
 import Button from '../button/button';
 import Image from '../image/image';
 import InputField from '../input/inputField';
 
-const Modal = ({isOpen, onClose, team}) => {
+const Modal = ({ isOpen, onClose, team }) => {
     return (
         <>
             {isOpen && (
-                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40 overflow-y-hidden"
-                     onClick={onClose}/>
+                <div className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40 overflow-y-hidden" onClick={onClose} />
             )}
 
-            <div
-                className={`fixed top-0 right-0 h-full overflow-y-auto w-[55%] border border-gray-medium transform transition-transform ease-in-out duration-700 bg-gray-light-bluish ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
+            <div className={`fixed top-0 right-0 h-full overflow-y-auto w-[55%] border border-gray-medium transform transition-transform ease-in-out duration-700 bg-gray-light-bluish ${isOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
 
                 <div className='bg-white py-5 px-3 border-y border-slate-300 cursor-pointer' onClick={onClose}>
-                    <ArrowLeft className="!w-6 !h-6"/>
+                    <ArrowLeft className="!w-6 !h-6" />
                 </div>
 
                 <div className='my-5 ml-16'>
@@ -31,6 +29,7 @@ const Modal = ({isOpen, onClose, team}) => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-6">
+                    
                         <div className="sm:col-span-3">
                             <div className="mt-2">
                                 <InputField
@@ -47,6 +46,7 @@ const Modal = ({isOpen, onClose, team}) => {
                                 />
                             </div>
                         </div>
+
 
                         {team.region !== "" ? (
                             <div className="sm:col-span-3">

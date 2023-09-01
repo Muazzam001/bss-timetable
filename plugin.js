@@ -149,6 +149,16 @@ export default plugin(
                     'gray-dark1': "#707070",
                     'gray-dark2': "#C8C8C8",
 
+                    // Red
+                    'red-medium': "#FF6E6E",
+                    'red-dark': "#C70039",
+                    
+                    // yellow
+                    'yellow-medium': "#FFAC1C",
+                    'yellow-dark': "#E39E2F",
+
+                    // 
+
                 },
                 fontFamily: {
                     'primary': ['Poppins', 'Raleway', 'Montserrat', 'Open Sans', 'sans-serif'],

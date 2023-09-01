@@ -8,8 +8,9 @@ import lock from "./images/lock.svg";
 import envelope from "./images/envelope.svg";
 import plus from "./images/plus.png"
 import section from "./images/section.png"
-import ArrowDown from "./icons/arrowDown";
-import ArrowUp from "./icons/arrowUp";
+import arrowDown from "./icons/arrowDown";
+import arrowUp from "./icons/arrowUp";
+
 import whole from "./images/whole.png";
 import textBooks from "./images/text-books.png";
 import teacher from "./images/teacher.png";
@@ -23,8 +24,10 @@ import home from "./images/home.png";
 import modules from "./images/modules.png";
 import subject from "./images/subject.png";
 import teacher2 from "./images/teacher2.png";
-import Edit from "./icons/edit"
+import edit from "./icons/edit"
 import close from "./images/close.png";
+import time from "./images/time.png"
+import check from "./images/check.png"
 
 export const assets = {
     signIn,
@@ -36,8 +39,8 @@ export const assets = {
     lock,
     envelope,
     plus,
-    ArrowDown,
-    ArrowUp,
+    arrowDown,
+    arrowUp,
     section,
     whole,
     textBooks,
@@ -47,13 +50,14 @@ export const assets = {
     classroom,
     hamburger,
     close,
-
     classes,
     classroom2,
     home,
     modules,
     subject,
     teacher2,
-    Edit,
+    edit,
+    time,
+    check,
 
 }

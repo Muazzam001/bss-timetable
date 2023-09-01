@@ -1,10 +1,9 @@
-import {assets} from '@/assets';
-import {useState} from 'react';
+import { assets } from '@/assets';
+import { useState } from 'react';
 import Accordion from '../shared/accordion/accordion';
 import Button from '../shared/button/button';
-import Icon from '../shared/icon/icon';
 import Modal from '../shared/modal/modal';
-
+import SubjectCard from '../shared/subjectCard/subjectCard';
 
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,13 +25,12 @@ const ManageSchool = () => {
 
     // Handle Change team value
     const handleChange = (target) => {
-        const {name, value} = target;
-        setTeam((prevTeam) => ({...prevTeam, [name]: value}))
+        const { name, value } = target;
+        setTeam((prevTeam) => ({ ...prevTeam, [name]: value }))
     }
 
     const region = ["ROC", "RON", "ROS"]
     const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
-
     const city = ["Lahore", "Islamabad", "Peshawar", "Rawalpindi", "Kashmir", "Rawalakot"]
     const branch = ["Gulberg", "Shadman", "Johar Town", "Zaman Park", "Azadi Chowk", "Badshahi Masjid Lahore"]
     const level = ["Early Year - Co-Education", "Early Year - Boys", "Low Primary - Co-Education", "Primary - Co-Education", "Primary - Girls", "Primary - Boys", "IB School - Co-Education", "Secondary School - Co-Education", "Secondary School - Boys", "Secondary School - Girls", "All / Whole"]
@@ -43,6 +41,7 @@ const ManageSchool = () => {
 
                     <div className=''>
                         <h3 className='text-h3 font-primary text-center text-blue-dark1'>Welcome to Beaconhouse</h3>
+
                         <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from
                             beacon house team</p>
 
@@ -55,6 +54,7 @@ const ManageSchool = () => {
                         <div
                             className={`grid grid-flow-row gap-y-8 lg:gap-y-12 gap-x-5 md:gap-x-10 lg:gap-x-15 3xl:gap-x-20 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
                             <div className="w-full">
+                            
                                 <Button
                                     icon={assets.plus}
                                     rounded={false}
@@ -64,7 +64,7 @@ const ManageSchool = () => {
                                     className="font-medium text-sm mb-3 min-w-[130px] justify-start"
                                     onClick={openModal}
                                 />
-
+                                
                                 <Accordion
                                     items={region}
                                     title="Select Region"
@@ -74,6 +74,7 @@ const ManageSchool = () => {
                             </div>
 
                             {team.region !== "" ? (
+
                                 <div className="w-full">
                                     <Button
                                         icon={assets.plus}
@@ -84,6 +85,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+                                    
                                     <Accordion
                                         items={cluster}
                                         title="Select Cluster"
@@ -94,7 +96,9 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.cluster !== "" ? (
+
                                 <div className="w-full">
+
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -104,6 +108,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+                                    
                                     <Accordion
                                         items={city}
                                         title="Select City"
@@ -134,6 +139,7 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.branch !== "" ? (
+
                                 <div className="w-full">
                                     <Button
                                         icon={assets.plus}
@@ -144,6 +150,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+                                    
                                     <Accordion
                                         items={level}
                                         title="Select Level"
@@ -164,7 +171,7 @@ const ManageSchool = () => {
                                 className="px-18 py-3"
                             />
                         </div>
-
+                        
                         <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
                     </div>
                 </div>

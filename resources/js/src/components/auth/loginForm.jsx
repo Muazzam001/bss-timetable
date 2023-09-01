@@ -88,7 +88,6 @@ export default function LoginForm({ className }) {
                         />
                     </div>
 
-                    {/* Remember me */}\
                     <label htmlFor="remember-me" className="flex items-center ml-4">
                         <div className="border border-blue-medium1 w-5 h-5 rounded cursor-pointer z-50">
                             <input
@@ -97,7 +96,8 @@ export default function LoginForm({ className }) {
                                 type="checkbox"
                                 className="peer hidden"
                             />
-                            <span className="peer-checked:inline-block hidden w-[12px] h-[7px] border-t-2 border-r-2 rotate-[130deg] translate-x-[3px] -translate-y-[5px] border-blue-dark2 cursor-pointer"></span>
+                            <span className="peer-checked:inline-block hidden w-[12px] h-[7px] border-t-2 border-r-2 rotate-[130deg] translate-x-[3px] -translate-y-[6px] border-blue-dark2 cursor-pointer"></span>
+
                         </div>
                         <span
 
