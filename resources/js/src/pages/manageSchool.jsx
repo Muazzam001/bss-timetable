@@ -44,7 +44,7 @@ const ManageSchool = () => {
                         <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from
                             beacon house team</p>
 
-                        <Icon className='envelope' />
+                        <Icon className='bg-primary1/50'  />
                     </div>
 
 
@@ -53,7 +53,7 @@ const ManageSchool = () => {
                         <div
                             className={`grid grid-flow-row gap-y-8 lg:gap-y-12 gap-x-5 md:gap-x-10 lg:gap-x-15 3xl:gap-x-20 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
                             <div className="w-full">
-                            
+
                                 <Button
                                     icon={assets.plus}
                                     rounded={false}
@@ -95,7 +95,7 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.cluster !== "" ? (
-                            
+
                                 <div className="w-full">
 
                                     <Button
