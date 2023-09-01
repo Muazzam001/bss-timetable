@@ -1,7 +1,7 @@
 import React from 'react';
 import {assets} from '@/assets';
-import ResetCard from '@/src/components/auth/signIn/resetCard';
-import Image from '@/src/components/shared/image';
+import ResetCard from '@/src/components/auth/resetCard';
+import Image from '@/src/shared/image/image';
 import './auth.scss';
 
 const ResetPassword = () => {
