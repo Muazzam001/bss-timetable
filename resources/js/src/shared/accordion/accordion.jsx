@@ -9,7 +9,6 @@ const Accordion = ({items, title, name, onChange}) => {
                        onChange={(e) => onChange(e.currentTarget)}/>
                 <label htmlFor={teamName}
                        className="peer-checked:bg-blue-light1 min-w-[110px] rounded-lg w-full p-3 font-primary text-center text-sm text-navy-dark-blue bg-gray-light cursor-pointer">{teamName}</label>
-
             </div>
         )
     })

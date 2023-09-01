@@ -10,7 +10,6 @@ import plus from "./images/plus.png"
 import section from "./images/section.png"
 import arrowDown from "./icons/arrowDown";
 import arrowUp from "./icons/arrowUp";
-
 import whole from "./images/whole.png";
 import textBooks from "./images/text-books.png";
 import teacher from "./images/teacher.png";

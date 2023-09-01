@@ -1,9 +1,9 @@
-import { assets } from '@/assets';
-import { useState } from 'react';
+import {assets} from '@/assets';
+import {useState} from 'react';
 import Accordion from '../shared/accordion/accordion';
 import Button from '../shared/button/button';
+import Icon from '../shared/icon/icon';
 import Modal from '../shared/modal/modal';
-import SubjectCard from '../shared/subjectCard/subjectCard';
 
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,7 +41,6 @@ const ManageSchool = () => {
 
                     <div className=''>
                         <h3 className='text-h3 font-primary text-center text-blue-dark1'>Welcome to Beaconhouse</h3>
-
                         <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from
                             beacon house team</p>
 
@@ -64,7 +63,7 @@ const ManageSchool = () => {
                                     className="font-medium text-sm mb-3 min-w-[130px] justify-start"
                                     onClick={openModal}
                                 />
-                                
+
                                 <Accordion
                                     items={region}
                                     title="Select Region"
@@ -85,7 +84,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
-                                    
+
                                     <Accordion
                                         items={cluster}
                                         title="Select Cluster"
@@ -96,7 +95,7 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.cluster !== "" ? (
-
+                            
                                 <div className="w-full">
 
                                     <Button
@@ -108,7 +107,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
-                                    
+
                                     <Accordion
                                         items={city}
                                         title="Select City"
@@ -150,7 +149,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
-                                    
+
                                     <Accordion
                                         items={level}
                                         title="Select Level"
@@ -171,7 +170,7 @@ const ManageSchool = () => {
                                 className="px-18 py-3"
                             />
                         </div>
-                        
+
                         <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
                     </div>
                 </div>

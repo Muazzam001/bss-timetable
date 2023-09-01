@@ -45,4 +45,3 @@ const InputSpinner = ({min, max, value, setState, className}) => {
 }
 
 export default InputSpinner
-

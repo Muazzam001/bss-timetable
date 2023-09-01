@@ -10,4 +10,3 @@ const Image = ({ src, alt, className, style }) => {
 }
 
 export default Image
-
