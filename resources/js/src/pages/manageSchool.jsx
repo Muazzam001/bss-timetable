@@ -44,7 +44,7 @@ const ManageSchool = () => {
                         <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from
                             beacon house team</p>
 
-                        <Icon className='bg-primary1/50'  />
+                        <Icon className='bg-primary1/50 bg-opacity-50'  />
                     </div>
 
 

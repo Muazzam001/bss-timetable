@@ -1,11 +1,11 @@
 .auth-wrapper {
-    @apply container max-xl:h-[calc(100vh-68px)] xl:h-[calc(100vh-80px)] grid grid-cols-5 max-md:grid-cols-1 gap-4 xl:gap-6 px-10 max-xl:py-5;
+    @apply container max-xl:h-[calc(100vh-68px)] xl:h-[calc(100vh-80px)] grid grid-cols-5 max-md:grid-cols-1 gap-8 xl:gap-10 xl:gap-6 px-10 max-xl:py-5;
 }
 
 .auth-img-wrapper {
-    @apply flex justify-center items-center max-xl:col-span-2 xl:col-span-3 mx-auto xl:max-w-[850px] max-lg:max-w-[650px] max-lg:max-w-[450px] max-md:max-w-[250px];
+    @apply flex justify-center items-center max-xl:col-span-2 xl:col-span-3 mx-auto xl:max-w-[850px] max-xl:max-w-[650px] max-lg:max-w-[450px];
 }
 
 .auth-card-wrapper {
-    @apply flex items-center justify-center max-xl:col-span-3 xl:col-span-2;
+    @apply flex items-center justify-center max-xl:col-span-3 xl:col-span-2 lg:px-10 2xl:px-12 3xl:px-15;
 }
