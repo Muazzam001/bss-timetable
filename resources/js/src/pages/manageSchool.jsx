@@ -5,6 +5,7 @@ import Button from '../shared/button/button';
 import Icon from '../shared/icon/icon';
 import Modal from '../shared/modal/modal';
 
+
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -31,6 +32,7 @@ const ManageSchool = () => {
 
     const region = ["ROC", "RON", "ROS"]
     const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
+
     const city = ["Lahore", "Islamabad", "Peshawar", "Rawalpindi", "Kashmir", "Rawalakot"]
     const branch = ["Gulberg", "Shadman", "Johar Town", "Zaman Park", "Azadi Chowk", "Badshahi Masjid Lahore"]
     const level = ["Early Year - Co-Education", "Early Year - Boys", "Low Primary - Co-Education", "Primary - Co-Education", "Primary - Girls", "Primary - Boys", "IB School - Co-Education", "Secondary School - Co-Education", "Secondary School - Boys", "Secondary School - Girls", "All / Whole"]
@@ -46,6 +48,7 @@ const ManageSchool = () => {
 
                         <Icon className='envelope' />
                     </div>
+
 
                     <div>
 
