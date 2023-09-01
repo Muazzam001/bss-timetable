@@ -5,7 +5,7 @@ import ForgotPassword from './pages/forgotPassword';
 import ResetPassword from './pages/resetPassword';
 import ManageSchool from './pages/manageSchool';
 
-class AppRoutes extends React.Component{
+class AppRoutes extends React.Component {
 	render() {
 		return (
 			<BrowserRouter>

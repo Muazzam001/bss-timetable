@@ -1,7 +1,7 @@
 import React from "react";
-import LoginForm from "@/src/components/auth/signIn/loginForm";
+import LoginForm from "@/src/components/auth/loginForm";
 import { assets } from "@/assets";
-import Image from "@/src/components/shared/image";
+import Image from "@/src/shared/image/image";
 import './auth.scss';
 
 export default function Login() {
