@@ -1,4 +1,4 @@
-import { assets } from '@/assets';
+import {assets} from '@/assets';
 import ArrowLeft from '@/assets/icons/arrowLeft';
 import Button from '../button/button';
 import Image from '../image/image';
