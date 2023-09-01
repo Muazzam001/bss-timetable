@@ -17,6 +17,13 @@ import settings from "./images/settings.png";
 import facilitator from "./images/facilitator.png";
 import classroom from "./images/classroom.png";
 import hamburger from "./images/hamburger.png";
+import classes from "./images/classes.png";
+import classroom2 from "./images/classroom2.png";
+import home from "./images/home.png";
+import modules from "./images/modules.png";
+import subject from "./images/subject.png";
+import teacher2 from "./images/teacher2.png";
+import Edit from "./icons/edit"
 import close from "./images/close.png";
 
 export const assets = {
@@ -40,4 +47,13 @@ export const assets = {
     classroom,
     hamburger,
     close,
+
+    classes,
+    classroom2,
+    home,
+    modules,
+    subject,
+    teacher2,
+    Edit,
+
 }
