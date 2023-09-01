@@ -9,13 +9,15 @@ const InputSpinner = ({min, max, value, setState, className}) => {
     };
 
     const increaseValue = () => {
-        if (value < max){
+        if (value < max) {
             setState(value + 1)
         }
     }
 
     const decreaseValue = () => {
-        if (value > min){
+
+        if (value > min) {
+
             setState(value - 1)
         }
     }
@@ -43,3 +45,4 @@ const InputSpinner = ({min, max, value, setState, className}) => {
 }
 
 export default InputSpinner
+

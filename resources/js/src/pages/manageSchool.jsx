@@ -5,7 +5,6 @@ import Button from '../shared/button/button';
 import Modal from '../shared/modal/modal';
 import SubjectCard from '../shared/subjectCard/subjectCard';
 
-
 const ManageSchool = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -32,8 +31,8 @@ const ManageSchool = () => {
 
     const region = ["ROC", "RON", "ROS"]
     const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
-    const city = ["Lahore", "Islamabad", "Peshawar", "Rawalpindi", "Kashmir", "Rawlakot"]
-    const branch = ["Gulberg Lahore", "Shadman", "Johar Town", "Zaman Park", "Azadi Chowk", "Badshahi Masjid Lahore"]
+    const city = ["Lahore", "Islamabad", "Peshawar", "Rawalpindi", "Kashmir", "Rawalakot"]
+    const branch = ["Gulberg", "Shadman", "Johar Town", "Zaman Park", "Azadi Chowk", "Badshahi Masjid Lahore"]
     const level = ["Early Year - Co-Education", "Early Year - Boys", "Low Primary - Co-Education", "Primary - Co-Education", "Primary - Girls", "Primary - Boys", "IB School - Co-Education", "Secondary School - Co-Education", "Secondary School - Boys", "Secondary School - Girls", "All / Whole"]
     return (
         <>
@@ -42,13 +41,20 @@ const ManageSchool = () => {
 
                     <div className=''>
                         <h3 className='text-h3 font-primary text-center text-blue-dark1'>Welcome to Beaconhouse</h3>
-                        <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from beacon house team</p>
+
+                        <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from
+                            beacon house team</p>
+
+                        <Icon className='envelope' />
                     </div>
+
 
                     <div>
 
-                        <div className={`grid grid-flow-row gap-y-10 xl:gap-x-30 lg:gap-x-10 gap-x-5 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
-                            <div className="w-full p-4">
+                        <div
+                            className={`grid grid-flow-row gap-y-8 lg:gap-y-12 gap-x-5 md:gap-x-10 lg:gap-x-15 3xl:gap-x-20 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
+                            <div className="w-full">
+                            
                                 <Button
                                     icon={assets.plus}
                                     rounded={false}
@@ -58,6 +64,7 @@ const ManageSchool = () => {
                                     className="font-medium text-sm mb-3 min-w-[130px] justify-start"
                                     onClick={openModal}
                                 />
+                                
                                 <Accordion
                                     items={region}
                                     title="Select Region"
@@ -67,7 +74,8 @@ const ManageSchool = () => {
                             </div>
 
                             {team.region !== "" ? (
-                                <div className="w-full p-4">
+
+                                <div className="w-full">
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -77,6 +85,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+                                    
                                     <Accordion
                                         items={cluster}
                                         title="Select Cluster"
@@ -87,7 +96,9 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.cluster !== "" ? (
-                                <div className="w-full p-4">
+
+                                <div className="w-full">
+
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -97,6 +108,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+                                    
                                     <Accordion
                                         items={city}
                                         title="Select City"
@@ -107,7 +119,7 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.city !== "" ? (
-                                <div className="w-full p-4">
+                                <div className="w-full">
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -127,7 +139,8 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.branch !== "" ? (
-                                <div className="w-full p-4">
+
+                                <div className="w-full">
                                     <Button
                                         icon={assets.plus}
                                         rounded={false}
@@ -137,11 +150,12 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+                                    
                                     <Accordion
                                         items={level}
                                         title="Select Level"
                                         name="level"
-                                    // onChange={handleChange}
+                                        // onChange={handleChange}
                                     />
                                 </div>
                             ) : null}
@@ -154,9 +168,10 @@ const ManageSchool = () => {
                                 type="button"
                                 title="Finished & Next"
                                 color={"blue-dark2"}
-                                className="px-18 p-3 xl:mr-30 lg:mr-10 mr-5"
+                                className="px-18 py-3"
                             />
                         </div>
+                        
                         <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
                     </div>
                 </div>

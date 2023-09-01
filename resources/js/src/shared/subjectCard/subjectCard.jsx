@@ -19,7 +19,8 @@ const SubjectCard = () => {
                         <p className="text-md text-gray-500 font-primary">MATHS</p>
                     </div>
                 </div>
-                <div className='flex justify-between h-10 w-2/5'>
+
+            <div className='flex justify-between h-10 w-2/5'>
                     <Badge text={"Published"} color={"blue-medium1"} icon={assets.check}/>
                     <div className='flex gap-x-3 h-10'>
                         <span className='border-[1.5px] border-gray-medium rounded-full p-1 h-8 w-8 flex justify-center items-center'><Edit className="!w-6 !h-6" /></span>
@@ -30,8 +31,10 @@ const SubjectCard = () => {
             <div>
                 
             </div>
+
         </article>
     )
 }
 
 export default SubjectCard
+

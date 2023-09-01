@@ -1,6 +1,6 @@
 import React from 'react';
 import Tooltip from '@mui/material/Tooltip';
-import "./tooltips.css"
+import "./tooltips.scss"
 
 const Tooltips = ({title, children}) => {
     return (
@@ -11,7 +11,8 @@ const Tooltips = ({title, children}) => {
                 componentsProps={{
                     tooltip: {
                         sx: {
-                            bgcolor: '#C8C8C8',
+                            bgColor: '#C8C8C8',
+
                             border: 1,
                             color: "black",
                             borderColor: "black",
@@ -29,3 +30,4 @@ const Tooltips = ({title, children}) => {
 }
 
 export default Tooltips
+

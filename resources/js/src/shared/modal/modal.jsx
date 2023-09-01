@@ -21,29 +21,32 @@ const Modal = ({ isOpen, onClose, team }) => {
                     <h3 className='text-xl text-bold font-primary'>Manage School</h3>
                 </div>
 
-                <div className="flex flex-col gap-y-14 h-[calc(100vh-170px)] bg-white my-8 lg:mx-8 mx-2 border rounded-md border-gray-300 p-4 pt-10 overflow-y-auto">
+                <div
+                    className="flex flex-col gap-y-14 h-[calc(100vh-170px)] bg-white my-8 lg:mx-8 mx-2 border rounded-md border-gray-300 p-4 pt-10 overflow-y-auto">
                     <div className='flex gap-x-3 items-center'>
-                        <span><Image src={assets.section} alt="Input field icon" className='h-9 w-9' /></span>
+                        <span><Image src={assets.section} alt="Input field icon" className='h-9 w-9'/></span>
                         <h2 className="leading-7 text-2xl font-primary">Add Section</h2>
                     </div>
 
                     <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-6">
-                            <div className="sm:col-span-3">
-                                <div className="mt-2">
-                                    <InputField
-                                        type="text"
-                                        htmlFor="region"
-                                        name="region"
-                                        id="region"
-                                        label="Select Region"
-                                        className="!p-3"
-                                        placeholder="Select Region..."
-                                        disabled={team.region !== ""}
+                    
+                        <div className="sm:col-span-3">
+                            <div className="mt-2">
+                                <InputField
+                                    type="text"
+                                    htmlFor="region"
+                                    name="region"
+                                    id="region"
+                                    label="Select Region"
+                                    className="!p-3"
+                                    placeholder="Select Region..."
+                                    disabled={team.region !== ""}
                                     // value={}
                                     // onChange={}
-                                    />
-                                </div>
+                                />
                             </div>
+                        </div>
+
 
                         {team.region !== "" ? (
                             <div className="sm:col-span-3">
@@ -57,8 +60,8 @@ const Modal = ({ isOpen, onClose, team }) => {
                                         placeholder="Select Cluster..."
                                         className="!p-3"
                                         disabled={team.region !== "" && team.cluster !== ""}
-                                    // value={ }
-                                    // onChange={ }
+                                        // value={ }
+                                        // onChange={ }
                                     />
                                 </div>
                             </div>
@@ -76,14 +79,14 @@ const Modal = ({ isOpen, onClose, team }) => {
                                         placeholder="Select City..."
                                         className="!p-3"
                                         disabled={team.region !== "" && team.cluster !== "" && team.city !== ""}
-                                    // value={ }
-                                    // onChange={ }
+                                        // value={ }
+                                        // onChange={ }
                                     />
                                 </div>
                             </div>
                         ) : null}
 
-                        {team.region !== "" && team.cluter !== "" && team.city !== ""? (
+                        {team.region !== "" && team.cluter !== "" && team.city !== "" ? (
                             <div className="sm:col-span-3">
                                 <div className="mt-2">
                                     <InputField
@@ -95,8 +98,8 @@ const Modal = ({ isOpen, onClose, team }) => {
                                         placeholder="Select Section..."
                                         className="!p-3"
                                         disabled={team.region !== "" && team.cluster !== "" && team.city !== "" && team.branch !== ""}
-                                    // value={ }
-                                    // onChange={ }
+                                        // value={ }
+                                        // onChange={ }
                                     />
                                 </div>
                             </div>
@@ -110,14 +113,14 @@ const Modal = ({ isOpen, onClose, team }) => {
                             hover={false}
                             className="!px-8 !bg-gray-medium !text-black !text-sm"
                         />
-                        
+
                         <Button
                             title="Save and Add More"
                             color="blue-dark2"
                             rounded={true}
                             className="!px-8 !text-sm"
                         />
-                        
+
                         <Button
                             title="Save and Finished"
                             color="blue-dark2"

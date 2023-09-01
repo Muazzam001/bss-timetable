@@ -5,10 +5,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InputBase from '@mui/material/InputBase';
 import { styled } from '@mui/material/styles';
 
-
-
 const InputSelect = ({ options, className, defaultValue, setState, value, width }) => {
     const BootstrapInput = styled(InputBase)(({ theme }) => ({
+
         'label + &': {
             marginTop: theme.spacing(3),
             width: `${width}`,
@@ -29,7 +28,8 @@ const InputSelect = ({ options, className, defaultValue, setState, value, width 
 
     const optionItems = options?.map((item, index) => {
         return (
-            <MenuItem key={`${index}`} sx={{width:`${width}`}} value={item} className='bg-lime-500 z-50'>{item}</MenuItem>
+            <MenuItem key={`${index}`} sx={{width: `${width}`}} value={item}
+                      className='bg-lime-500 z-50'>{item}</MenuItem>
         )
     });
 

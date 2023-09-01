@@ -148,7 +148,7 @@ export default plugin(
                     'gray-medium': "#D4D4D4",
                     'gray-dark1': "#707070",
                     'gray-dark2': "#C8C8C8",
-                    
+
                     // Red
                     'red-medium': "#FF6E6E",
                     'red-dark': "#C70039",

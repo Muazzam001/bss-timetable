@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { assets } from "@/assets";
+import {useState} from "react";
+import {assets} from "@/assets";
 import Image from "../image/image";
 
 const Sidebar = () => {
@@ -21,14 +21,17 @@ const Sidebar = () => {
         <div className="flex">
             <div className={`${open ? "w-72" : "w-24"} bg-dark-purple h-screen p-5 pt-8 relative duration-300`}>
                 <ul className="pt-6 flex flex-col gap-2">
-                    <div onClick={handleSideBar} className="flex justify-end rounded-md py-2 cursor-pointer font-primary items-center">
+
+                    <div onClick={handleSideBar}
+                         className="flex justify-end rounded-md py-2 cursor-pointer font-primary items-center">
                         {open ? (
                             <div className="bg-lightsky-blue rounded-md p-1">
-                                <Image src={assets.hamburger} alt="hamburger sidebar icon" className="w-[25px] rounded-md" />
+                                <Image src={assets.hamburger} alt="hamburger sidebar icon"
+                                       className="w-[25px] rounded-md"/>
                             </div>
                         ) : (
-                                <div className="bg-lightsky-blue rounded-md p-1">
-                                    <Image src={assets.close} alt="close sidebar icon" className="w-[25px] rounded-md" />
+                            <div className="bg-lightsky-blue rounded-md p-1">
+                                <Image src={assets.close} alt="close sidebar icon" className="w-[25px] rounded-md"/>
                             </div>
                         )}
                     </div>
@@ -48,4 +51,6 @@ const Sidebar = () => {
         </div>
     );
 };
+
 export default Sidebar;
+

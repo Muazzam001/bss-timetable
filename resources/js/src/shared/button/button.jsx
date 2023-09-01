@@ -30,6 +30,7 @@ const Button = ({ className, title, type, onClick, color, icon, rounded, hover }
       {title}
     </button>
   )
-}
 
+}
 export default Button
+
