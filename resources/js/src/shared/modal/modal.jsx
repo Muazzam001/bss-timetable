@@ -1,4 +1,4 @@
-import {assets} from '@/assets';
+import { assets } from '@/assets';
 import ArrowLeft from '@/assets/icons/arrowLeft';
 import Button from '../button/button';
 import Image from '../image/image';
@@ -31,6 +31,7 @@ const Modal = ({isOpen, onClose, team}) => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-6">
+
                         <div className="sm:col-span-3">
                             <div className="mt-2">
                                 <InputField

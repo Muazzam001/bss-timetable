@@ -29,3 +29,4 @@ const Tooltips = ({title, children}) => {
 }
 
 export default Tooltips
+

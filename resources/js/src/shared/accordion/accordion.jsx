@@ -25,7 +25,6 @@ const Accordion = ({items, title, name, onChange}) => {
                 </div>
             </div>
         </div>
-
     )
 }
 

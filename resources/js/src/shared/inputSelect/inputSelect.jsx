@@ -3,13 +3,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InputBase from '@mui/material/InputBase';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
+const InputSelect = ({ options, className, defaultValue, setState, value, width }) => {
+    const BootstrapInput = styled(InputBase)(({ theme }) => ({
 
-const InputSelect = ({options, className, defaultValue, setState, value, width}) => {
-    console.log(width);
-
-    const BootstrapInput = styled(InputBase)(({theme}) => ({
         'label + &': {
             marginTop: theme.spacing(3),
             width: `${width}`,
@@ -46,7 +44,7 @@ const InputSelect = ({options, className, defaultValue, setState, value, width})
                 onChange={handleChange}
                 className={`bg-transparent border-0 ${className}`}
                 sx={{width: `${width}`}}
-                input={<BootstrapInput/>}
+                input={<BootstrapInput />}
                 defaultValue={defaultValue ? defaultValue : ""}
                 IconComponent={ExpandMoreIcon}
                 MenuProps={{
@@ -61,7 +59,7 @@ const InputSelect = ({options, className, defaultValue, setState, value, width})
                             },
                             '& .MuiList-root': {
                                 padding: 0,
-                                width: {width},
+                                width: { width },
                             },
                             '& .MuiMenuItem-root': {
                                 color: "#7D7D92",

@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from '../image/image';
 
-
 const InputField = ({
                         icon,
                         type,
