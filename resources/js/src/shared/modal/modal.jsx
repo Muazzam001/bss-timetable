@@ -1,4 +1,4 @@
-import { assets } from '@/assets';
+import {assets} from '@/assets';
 import ArrowLeft from '@/assets/icons/arrowLeft';
 import Button from '../button/button';
 import Image from '../image/image';
@@ -107,7 +107,7 @@ const Modal = ({isOpen, onClose, team}) => {
                         ) : null}
                     </div>
 
-                    <div className='flex flex-wrap gap-5 justify-end pr-6 mb-16 mt-6'>
+                    <div className='flex flex-wrap gap-5 justify-end mt-6'>
                         <Button
                             title="Cancel"
                             rounded={true}

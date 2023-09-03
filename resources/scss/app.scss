@@ -28,3 +28,12 @@
     background: #2536a8;
 }
 
+input {
+    &:-webkit-autofill,
+    &:autofill {
+        transition: background-color 600000s 0s, color 600000s 0s;
+        -webkit-box-shadow: 0 0 0 1000px #fff inset;
+        -webkit-text-fill-color: #000;
+        background-color: transparent;
+    }
+}

@@ -1,8 +1,6 @@
 import React from 'react';
 import Edit from '@/assets/icons/edit';
 import Delete from '@/assets/icons/delete';
-import Badge from '../badge/badge';
-import { assets } from '@/assets';
 
 const SubjectCard = () => {
 
@@ -14,7 +12,7 @@ const SubjectCard = () => {
                     </span>
                     <div className="flex flex-col">
                         <p className="text-2xl font-medium font-primary text-gray-900">
-                            Mathimatics
+                            Mathematics
                         </p>
                         <p className="text-md text-gray-500 font-primary">MATHS</p>
                     </div>
