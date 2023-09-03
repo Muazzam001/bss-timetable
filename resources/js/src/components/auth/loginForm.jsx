@@ -50,10 +50,9 @@ export default function LoginForm({ className }) {
         }
     }
 
-
     return (
         <>
-            <div className="card-wrapper ">
+            <div className="card-wrapper">
                 <div className="flex justify-center mb-5 xl:mb-8">
                     <h4 className="text-dark/80 text-h5 xl:text-h4 font-semibold font-primary">Sign In To Beaconhouse</h4>
                 </div>
@@ -95,7 +94,7 @@ export default function LoginForm({ className }) {
                                 type="checkbox"
                                 className="peer hidden"
                             />
-                                  
+
                             <span className="peer-checked:inline-block hidden w-[12px] h-[7px] border-t-2 border-r-2 rotate-[130deg] translate-x-[3px] -translate-y-[5px] border-blue-dark2 cursor-pointer"></span>
 
                         </div>

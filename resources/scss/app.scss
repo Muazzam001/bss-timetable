@@ -8,23 +8,30 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
     background: #e7e7e7;
-    border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #4193E5;
-    border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #2536a8;
+    background: #175088;
 }
 
+input {
+    &:-webkit-autofill,
+    &:autofill {
+        transition: background-color 600000s 0s, color 600000s 0s;
+        -webkit-box-shadow: 0 0 0 1000px #fff inset;
+        -webkit-text-fill-color: #000;
+        background-color: transparent;
+    }
+}

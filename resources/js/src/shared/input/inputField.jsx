@@ -15,7 +15,6 @@ const InputField = ({
                         label,
                         disabled
                     }) => {
-
     return (
         <>
             {label ? (
