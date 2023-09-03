@@ -39,17 +39,13 @@ const ManageSchool = () => {
             <div className='container'>
                 <div className='flex flex-col gap-10 py-12'>
 
-                    <div className=''>
+                    <div>
                         <h3 className='text-h3 font-primary text-center text-blue-dark1'>Welcome to Beaconhouse</h3>
                         <p className='text-center font-primary text-sm text-blue-dark1'>Please provide content from
                             beacon house team</p>
-
-                        <Icon className='bg-primary1/50 bg-opacity-50'  />
                     </div>
 
-
                     <div>
-
                         <div
                             className={`grid grid-flow-row gap-y-8 lg:gap-y-12 gap-x-5 md:gap-x-10 lg:gap-x-15 3xl:gap-x-20 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
                             <div className="w-full">
@@ -73,7 +69,6 @@ const ManageSchool = () => {
                             </div>
 
                             {team.region !== "" ? (
-
                                 <div className="w-full">
                                     <Button
                                         icon={assets.plus}
@@ -95,7 +90,6 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.cluster !== "" ? (
-
                                 <div className="w-full">
 
                                     <Button
@@ -128,6 +122,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+
                                     <Accordion
                                         items={branch}
                                         title="Select Branch"
@@ -138,7 +133,6 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.branch !== "" ? (
-
                                 <div className="w-full">
                                     <Button
                                         icon={assets.plus}
@@ -173,6 +167,7 @@ const ManageSchool = () => {
 
                         <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
                     </div>
+
                 </div>
             </div>
         </>

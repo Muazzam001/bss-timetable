@@ -13,6 +13,7 @@ const InboxCard = ({ className }) => {
                           If it doesn’t show up soon, check your spam folder.</p>
                       <Link className='text-xs mt-4 text-link'>Resend email</Link>
                   </div>
+
                   <div className="mt-12">
 
                       <div className="flex flex-col gap-y-5">
