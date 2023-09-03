@@ -135,6 +135,7 @@ const ManageSchool = () => {
                                         className="font-medium text-sm mb-3"
                                         onClick={openModal}
                                     />
+
                                     <Team
                                         items={branch}
                                         title="Select Branch"
