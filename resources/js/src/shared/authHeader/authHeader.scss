@@ -10,6 +10,10 @@
     @apply flex items-center max-xl:gap-x-2 xl:gap-x-4 max-md:px-4 max-xl:px-6 xl:px-8;
 
     &:first-child {
-        @apply border-r-2 border-solid border-r-white;
+        @apply border-r border-solid border-r-white;
+    }
+
+    &:nth-child(2) {
+        @apply border-r border-solid border-r-white;
     }
 }

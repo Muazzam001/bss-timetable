@@ -8,6 +8,7 @@ import './signIn.scss';
 
 export default function LoginForm({ className }) {
     const navigate = useNavigate();
+
     const [form, setForm] = useState({
         email: "",
         password: "",
@@ -95,7 +96,7 @@ export default function LoginForm({ className }) {
                                 type="checkbox"
                                 className="peer hidden"
                             />
-                                  
+
                             <span className="peer-checked:inline-block hidden w-[12px] h-[7px] border-t-2 border-r-2 rotate-[130deg] translate-x-[3px] -translate-y-[5px] border-blue-dark2 cursor-pointer"></span>
 
                         </div>
