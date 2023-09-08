@@ -24,29 +24,34 @@ const Whole = () => {
 
     return (
         <MainLayout headerItem={Menus}>
-            <div className='bg-gray-light-yellowish min-h-[calc(100vh-176px)]'>
 
-                <div className='container flex items-center flex-wrap gap-4 pt-5'>
+            <div className='bg-gray-light-yellowish py-10 min-h-[calc(100vh-175px)]'>
+
+                <div className='container flex items-center flex-wrap gap-4'>
                     <InputField
                         placeholder="ROC"
                         className="h-10 lg:!w-38"
                         disabled
                     />
+
                     <InputField
                         placeholder="ROC"
                         className="h-10 lg:!w-38"
                         disabled
                     />
+
                     <InputField
                         placeholder="ROC"
                         className="h-10 lg:!w-38"
                         disabled
                     />
+
                     <InputField
                         placeholder="ROC"
                         className="h-10 lg:!w-38"
                         disabled
                     />
+
                     <InputSelect
                         width={"160px"}
                         options={cluster}
@@ -54,6 +59,7 @@ const Whole = () => {
                         value={teamLevel}
                         setState={setTeamLevel}
                     />
+
                     <InputSelect
                         width={"160px"}
                         options={level}
@@ -61,6 +67,7 @@ const Whole = () => {
                         value={year}
                         setState={setYear}
                     />
+
                     <Button
                         rounded={false}
                         type="button"
@@ -69,6 +76,7 @@ const Whole = () => {
                         className="font-medium text-sm h-10 mt-1 min-w-[130px] justify-start"
                     />
                 </div>
+
                 <ManageLesson
                     options={level}
                     icon={assets.settings}
