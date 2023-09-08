@@ -27,6 +27,8 @@ import edit from "./icons/edit"
 import close from "./images/close.png";
 import time from "./images/time.png"
 import check from "./images/check.png"
+import loading from "./images/loading.png"
+import recent from "./images/recent.png"
 
 export const assets = {
     signIn,
@@ -58,5 +60,6 @@ export const assets = {
     edit,
     time,
     check,
-
+    loading,
+    recent,
 }

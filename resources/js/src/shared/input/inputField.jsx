@@ -15,7 +15,6 @@ const InputField = ({
                         label,
                         disabled
                     }) => {
-
     return (
         <>
             {label ? (
@@ -23,7 +22,7 @@ const InputField = ({
                     {label}
                 </label>
             ) : null}
-            <div className="relative mt-1">
+            <div className="relative mt-1 max-lg:flex-auto">
                 {icon ? (
                     <div
                         className="pointer-events-none absolute inset-y-2 rounded-full left-3 h-9 w-9 flex items-center justify-center p-[5px] bg-blue-light2">
