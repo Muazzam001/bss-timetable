@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import './calendar.scss';
-import { assets } from '@/assets';
+import {assets} from '@/assets';
 import Image from '@/src/shared/image/image';
 import LockIcon from '@mui/icons-material/Lock';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -22,7 +22,7 @@ const Calendar = () => {
             const calendarApi = calendarRef.current.getApi();
             const title = calendarApi.view.title;
             const newDate = new Date(title)
-            const dayName = new Date(title).toLocaleString('en-us', { weekday: 'long' })
+            const dayName = new Date(title).toLocaleString('en-us', {weekday: 'long'})
             setDayName(dayName)
             const year = newDate.getFullYear();
             setYear(year)
@@ -46,7 +46,7 @@ const Calendar = () => {
             <div className='flex justify-between items-center bg-white border border-gray-medium border-b-0'>
                 <div className='flex items-center gap-5 py-2 pl-16'>
 
-                    <Image src={assets.calendar1} alt="calendar icon" className="w-8" />
+                    <Image src={assets.calendar1} alt="calendar icon" className="w-8"/>
 
                     <div className='flex items-center gap-1'>
                         <span className='font-primary font-semibold'>{dayName}</span>
@@ -55,7 +55,7 @@ const Calendar = () => {
                             onClick={() => {
                                 const calenderNext = calendarRef.current.getApi();
                                 calenderNext.prev();
-                            }} />
+                            }}/>
 
                         <ArrowRight
                             className="cursor-pointer hover:bg-blue-light1 rounded-md"
@@ -196,19 +196,20 @@ const Calendar = () => {
                             <div className='flex items-center gap-5'>
                                 <div className='!bg-blue-dark2'>
 
-                                    <Image src={assets.recent} alt="recent icon" className="w-14 p-2" />
+                                    <Image src={assets.recent} alt="recent icon" className="w-14 p-2"/>
                                 </div>
                                 <div>
                                     <span className='font-primary flex items-center'>
-                                        <LockIcon className='!w-4' />
+                                        <LockIcon className='!w-4'/>
                                         {info.text}
                                     </span>
                                 </div>
                             </div>
                             <div className='flex bg-blue-dark2 p-2 mr-2'>
 
-                                <p className='border-r border-white text-sm font-primary font-normal text-white px-5'>New Lesson</p>
-                                
+                                <p className='border-r border-white text-sm font-primary font-normal text-white px-5'>New
+                                    Lesson</p>
+
                                 <p className='text-sm font-primary font-normal text-white px-5'>Manage Lessons</p>
                             </div>
                         </div>
