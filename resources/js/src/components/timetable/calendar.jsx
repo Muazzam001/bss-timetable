@@ -10,6 +10,9 @@ import LockIcon from '@mui/icons-material/Lock';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import CloseIcon from '@mui/icons-material/Close';
 import "./calender.css"
+import ArrowLeft from '@/assets/icons/arrowLeft';
+import ArrowRight from '@/assets/icons/arrowRight';
+
 
 const Calendar = () => {
     const calendarRef = useRef(null);
@@ -40,8 +43,60 @@ const Calendar = () => {
         ['10C Yellow', 'ENG', 'ISL', 'PST', 'BIO', 'CS', 'ECO', 'CHE', 'UDR', 'MTH', 'PHY', 'ECO', 'UDR'],
     ];
 
+    const CalendarHeader = () => {
+        return (
+            <div className='flex justify-between items-center bg-white border border-gray-medium border-b-0'>
+                <div className='flex items-center gap-5 py-2 pl-16'>
+                    <Image src={assets.calendar1} alt="calendar icon" className="w-8" />
+                    <div className='flex items-center gap-1'>
+                        <span className='font-primary font-semibold'>{dayName}</span>
+                        <ArrowLeft
+                            className="cursor-pointer hover:bg-blue-light1 rounded-md"
+                            onClick={() => {
+                                const calenderNext = calendarRef.current.getApi();
+                                calenderNext.prev();
+                            }} />
+                        <ArrowRight
+                            className="cursor-pointer hover:bg-blue-light1 rounded-md"
+                            onClick={() => {
+                                const calenderNext = calendarRef.current.getApi();
+                                calenderNext.next();
+                            }} />
+                        <span className='font-primary'>{year}</span>
+                    </div>
+                    <div className='ml-5'>
+                        <button className='bg-blue-dark2 text-white px-4 py-1 font-primary' onClick={()=> {
+                            const calenderNext = calendarRef.current.getApi();
+                            calenderNext.changeView('dayGridDay')
+                        }}>Day</button>
+                        <button 
+                        className='bg-gray-dark2 text-white px-4 py-1 font-primary' 
+                        onClick={() => {
+                            const calenderNext = calendarRef.current.getApi();
+                            calenderNext.changeView('dayGridWeek')
+                        }}
+                        disabled
+                        >Week</button>
+                    </div>
+                </div>
+                <div className='pr-5 flex items-center gap-8'>
+                    <button className='bg-blue-dark2 text-white px-4 py-1 flex gap-2 items-center font-primary rounded-sm'><Image src={assets.calendar2} alt="calendar icon" className="w-4" /><span>Dulplicate Calendar</span></button>
+                    <div className='flex items-center gap-3'>
+                        <Image src={assets.expand} alt="" className="w-8" />
+                        <Image src={assets.control} alt="" className="w-8" />
+                        <Image src={assets.deadline} alt="" className="w-8" />
+                        <Image src={assets.choose} alt="" className="w-8" />
+                        <Image src={assets.calendar} alt="" className="w-8" />
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div className="calendar-container px-10">
+            <CalendarHeader />
+      
             <FullCalendar
                 ref={calendarRef}
                 plugins={[dayGridPlugin, interactionPlugin]}
@@ -88,7 +143,7 @@ const Calendar = () => {
                                                 BS: "bg-[#F4F469]",
                                             }
                                             const cellColor = colors[cell] || 'bg-blue-dark2';
-                                            console.log(cellColor)
+
                                             return (
                                                 <td key={cellIndex} className='font-primary text-xs uppercase w-20 h-20 !p-1'>
                                                     <div className={`flex flex-col ${cellColor} rounded-sm p-1 text-white border border-blue-dark2`}>
@@ -110,11 +165,9 @@ const Calendar = () => {
                         </table>
                     )
                 }}
-                headerToolbar={{
-                    left: 'customDay prev,next customYear dayGridDay',
-                    center: "",
-                    right: "customCalenderButton"
-                }}
+                
+                headerToolbar={false}
+
                 customButtons={{
                     customDay: {
                         text: `${dayName}`,
@@ -122,10 +175,7 @@ const Calendar = () => {
                     customYear: {
                         text: `${year}`,
                     },
-                    customCalenderButton: {
-                        text: 'Duplicate Timetable',
-                        // icon: 
-                    }
+
                 }}
                 dayHeaderContent={(info) => {
                     return (
