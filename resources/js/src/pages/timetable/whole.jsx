@@ -14,12 +14,12 @@ const Whole = () => {
     const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
     const level = ["Early Year - Co-Education", "Early Year - Boys", "Low Primary - Co-Education", "Primary - Co-Education", "Primary - Girls", "Primary - Boys", "IB School - Co-Education", "Secondary School - Co-Education", "Secondary School - Boys", "Secondary School - Girls", "All / Whole"]
     const Menus = [
-        { title: "Home", src: assets.home },
-        { title: "Subjects", src: assets.subject },
-        { title: "Classes", src: assets.classes },
-        { title: "Classrooms", src: assets.classroom },
-        { title: "Teachers", src: assets.teacher2 },
-        { title: "Modules", src: assets.modules },
+        {title: "Home", src: assets.home},
+        {title: "Subjects", src: assets.subject},
+        {title: "Classes", src: assets.classes},
+        {title: "Classrooms", src: assets.classroom},
+        {title: "Teachers", src: assets.teacher2},
+        {title: "Modules", src: assets.modules},
     ];
 
     return (
@@ -28,6 +28,7 @@ const Whole = () => {
             <div className='bg-gray-light-yellowish py-10 min-h-[calc(100vh-175px)]'>
 
                 <div className='container flex items-center flex-wrap gap-4'>
+
                     <InputField
                         placeholder="ROC"
                         className="h-10 lg:!w-38"

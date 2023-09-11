@@ -5,8 +5,6 @@ import Button from '../shared/button/button';
 import Modal from '../shared/modal/modal';
 import MainLayout from '../shared/mainLayout/mainLayout';
 import MultiSelectionTeam from '../shared/multiSelectionTeam/multiSelectionTeam';
-import Image from '../shared/image/image';
-import Processing from '../shared/processing/processing';
 import {useNavigate} from "react-router-dom";
 
 const ManageSchool = () => {
@@ -24,7 +22,9 @@ const ManageSchool = () => {
     const [teamLevel, setTeamLevel] = useState([]);
 
     const handleLevelChange = (target) => {
+
         const { value } = target;
+
         if (target.checked) {
             if (!teamLevel.includes(value)) {
                 setTeamLevel([...teamLevel, value]);
@@ -56,7 +56,9 @@ const ManageSchool = () => {
 
     return (
         <MainLayout>
+
             <div className='container min-h-[calc(100vh-175px)]'>
+
                 <div className='flex flex-col gap-10 pb-12 pt-6'>
 
                     <div className=''>
@@ -187,7 +189,9 @@ const ManageSchool = () => {
                                 onClick={() => navigate("/timetable-whole")}
                             />
                         </div>
-                        <Modal isOpen={isModalOpen} onClose={closeModal} team={team} />
+
+                        <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
+
                     </div>
                 </div>
             </div>

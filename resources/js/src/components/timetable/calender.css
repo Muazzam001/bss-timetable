@@ -6,11 +6,15 @@
     text-transform: capitalize;
 }
 
+.fc-dayGridDay-button.fc-button.fc-button-primary {
+    border-radius: 0;
+}
+
 .fc-scrollgrid-sync-inner {
     max-height: 57px !important;
 }
 
-/*
+/* 
 .fc-daygrid-day-frame.fc-scrollgrid-sync-inner{
     height: 200px !important;
 } */
@@ -30,6 +34,6 @@
     max-height: fit-content !important;
 } */
 
-.table-inner {
+.table-inner{
     border: 2px solid !important;
 }
