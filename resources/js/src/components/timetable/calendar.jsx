@@ -13,6 +13,7 @@ import "./calender.css"
 import ArrowLeft from '@/assets/icons/arrowLeft';
 import ArrowRight from '@/assets/icons/arrowRight';
 
+
 const Calendar = () => {
     const calendarRef = useRef(null);
     const [dayName, setDayName] = useState("")
@@ -95,6 +96,7 @@ const Calendar = () => {
     return (
         <div className="calendar-container px-10">
             <CalendarHeader />
+      
             <FullCalendar
                 ref={calendarRef}
                 plugins={[dayGridPlugin, interactionPlugin]}
@@ -141,6 +143,7 @@ const Calendar = () => {
                                                 BS: "bg-[#F4F469]",
                                             }
                                             const cellColor = colors[cell] || 'bg-blue-dark2';
+
                                             return (
                                                 <td key={cellIndex} className='font-primary text-xs uppercase w-20 h-20 !p-1'>
                                                     <div className={`flex flex-col ${cellColor} rounded-sm p-1 text-white border border-blue-dark2`}>
@@ -162,7 +165,9 @@ const Calendar = () => {
                         </table>
                     )
                 }}
+                
                 headerToolbar={false}
+
                 customButtons={{
                     customDay: {
                         text: `${dayName}`,
@@ -170,6 +175,7 @@ const Calendar = () => {
                     customYear: {
                         text: `${year}`,
                     },
+
                 }}
                 dayHeaderContent={(info) => {
                     return (
