@@ -1,9 +1,9 @@
 import React from 'react';
 import { assets } from '@/assets';
 import Image from '../image/image';
-import "./header.scss";
+import "./authHeader.scss";
 
-const Header = () => {
+const AuthHeader = () => {
     const headerIcons = (title, icon) => {
         return (
             <>
@@ -37,4 +37,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default AuthHeader

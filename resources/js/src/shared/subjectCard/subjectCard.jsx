@@ -18,20 +18,16 @@ const SubjectCard = () => {
                     </div>
                 </div>
 
-                <div>
-                    <div className='flex gap-x-3'>
-                        <span className='border-[1.5px] border-gray-medium rounded-full p-1'><Edit
-                            className="!w-8 !h-8"/></span>
-                        <span className='border-[1.5px] border-gray-medium rounded-full p-1'><Delete
-                            className="!w-8 !h-8"/></span>
+                <div className='flex justify-between w-2/5'>
+                    <Badge text={"UnPublished"} bgColor={"bg-blue-medium1/40"} textColor={"text-blue-medium1"}/>
+                    <div className='flex gap-x-3 h-10'>
+                        <span className='border-[1.5px] border-gray-medium rounded-full h-8 w-8 flex justify-center items-center'><Edit
+                            className="!w-5 !h-5"/></span>
+                        <span className='border-[1.5px] border-gray-medium rounded-full h-8 w-8 flex justify-center items-center'><Delete
+                            className="!w-5 !h-5"/></span>
                     </div>
                 </div>
             </div>
-
-            {/* <span className="inline-flex items-center justify-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-emerald-700">
-                <p className="whitespace-nowrap text-sm">Paid</p>
-            </span> */}
-
         </article>
     )
 }

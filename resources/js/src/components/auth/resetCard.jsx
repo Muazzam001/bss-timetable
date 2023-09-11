@@ -14,10 +14,9 @@ const ResetCard = ({ className }) => {
                         If it doesn’t show up soon, check your spam folder.</p>
                 </div>
 
-                <Link className='text-blue-dark1 text-sm cursor-pointer text-center mx-auto font-primary'>Resend
-                    email</Link>
+                <Link className="text-blue-dark1 text-sm cursor-pointer text-center mx-auto font-primary">Resend email</Link>
 
-                <div className=" flex flex-col gap-y-5 w-full">
+                <div className="flex flex-col gap-y-5 w-full">
                     <Button
                         rounded={true}
                         type="button"

@@ -156,8 +156,26 @@ export default plugin(
                     // yellow
                     'yellow-medium': "#FFAC1C",
                     'yellow-dark': "#E39E2F",
+                    
+                    // maroon
+                    'maroon': "#CA4B4B",
+                    
+                    // Subjects
+                    'chemistry': "#997D6C",
+                    'islamiyat': "#88DEDE",
+                    'pak-study': "#5BCB5A",
+                    'physics': "#88DEDE",
+                    'urdu': "#88DEDE",
+                    'biology': "#88DEDE",
+                    'maths': "#88DEDE",
+                    'english': "#88DEDE",
+                    'computer': "#88DEDE",
+                    'hqt': "#88DEDE",
+                    'accounting': "#88DEDE",
+                    'bs': "#88DEDE",
+                    'economics': "#88DEDE",
+                    
 
-                    // 
 
                 },
                 fontFamily: {

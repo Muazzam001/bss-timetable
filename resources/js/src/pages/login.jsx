@@ -3,10 +3,11 @@ import LoginForm from "@/src/components/auth/loginForm";
 import { assets } from "@/assets";
 import Image from "@/src/shared/image/image";
 import './auth.scss';
+import AuthLayout from "../shared/authLayout/authLayout";
 
 export default function Login() {
 	return (
-		<>
+		<AuthLayout>
 			<div className='bg-primary-blue w-full'>
 				<div className="auth-wrapper">
 					<div className="auth-img-wrapper">
@@ -18,6 +19,6 @@ export default function Login() {
 					</div>
 				</div>
 			</div>
-		</>
+		</AuthLayout>
 	);
 }

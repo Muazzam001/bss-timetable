@@ -27,6 +27,15 @@ import edit from "./icons/edit"
 import close from "./images/close.png";
 import time from "./images/time.png"
 import check from "./images/check.png"
+import loading from "./images/loading.png"
+import recent from "./images/recent.png"
+import calendar1 from "./images/calendar1.png"
+import calendar2 from "./images/calendar2.png"
+import expand from "./images/expand.png"
+import deadline from "./images/deadline.png"
+import control from "./images/control.png"
+import choose from "./images/choose.png"
+import calendar from "./images/calendar.png"
 
 export const assets = {
     signIn,
@@ -58,5 +67,13 @@ export const assets = {
     edit,
     time,
     check,
-
+    loading,
+    recent,
+    calendar1,
+    calendar2,
+    calendar,
+    choose,
+    expand,
+    control,
+    deadline,
 }

@@ -3,10 +3,11 @@ import {assets} from '@/assets';
 import ResetCard from '@/src/components/auth/resetCard';
 import Image from '@/src/shared/image/image';
 import './auth.scss';
+import AuthLayout from '../shared/authLayout/authLayout';
 
 const ResetPassword = () => {
     return (
-        <>
+        <AuthLayout>
             <div className='bg-primary-blue w-full'>
                 <div className="auth-wrapper">
                     <div className="auth-img-wrapper">
@@ -18,7 +19,7 @@ const ResetPassword = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </AuthLayout>
     )
 }
 
