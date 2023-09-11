@@ -22,7 +22,9 @@ const ManageSchool = () => {
     const [teamLevel, setTeamLevel] = useState([]);
 
     const handleLevelChange = (target) => {
-        const {value} = target;
+
+        const { value } = target;
+
         if (target.checked) {
             if (!teamLevel.includes(value)) {
                 setTeamLevel([...teamLevel, value]);
@@ -187,7 +189,9 @@ const ManageSchool = () => {
                                 onClick={() => navigate("/timetable-whole")}
                             />
                         </div>
+
                         <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
+
                     </div>
                 </div>
             </div>

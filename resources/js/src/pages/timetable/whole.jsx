@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import InputField from '@/src/shared/input/inputField';
 import MainLayout from '@/src/shared/mainLayout/mainLayout';
 import InputSelect from '@/src/shared/inputSelect/inputSelect';
 import Button from '@/src/shared/button/button';
-import {assets} from '@/assets';
+import { assets } from '@/assets';
 import ManageLesson from '@/src/shared/manageLesson/manageLesson';
 import Calendar from '@/src/components/timetable/calendar';
 
