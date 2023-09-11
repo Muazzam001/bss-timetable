@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { assets } from "@/assets";
+import React, {useState} from "react";
+import {assets} from "@/assets";
 import InputField from "@/src/shared/input/inputField";
 import Button from "@/src/shared/button/button";
 import validator from "validator";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import './signIn.scss';
 
-export default function LoginForm({ className }) {
+export default function LoginForm({className}) {
     const navigate = useNavigate();
     const [form, setForm] = useState({
         email: "",
@@ -20,25 +20,25 @@ export default function LoginForm({ className }) {
 
     const handleChange = (value, field) => {
         if (field === "email") {
-            setForm({ ...form, email: value })
+            setForm({...form, email: value})
         } else if (field === "password") {
-            setForm({ ...form, password: value })
+            setForm({...form, password: value})
         }
     }
 
     const handleLogin = () => {
         let hasError = false;
-        setError({ email: "", password: "" });
+        setError({email: "", password: ""});
         // Check Validations
         if (validator.isEmpty(form.email)) {
-            setError(prevError => ({ ...prevError, email: "Email cannot be empty!" }));
+            setError(prevError => ({...prevError, email: "Email cannot be empty!"}));
             hasError = true;
         } else if (!validator.isEmail(form.email)) {
-            setError(prevError => ({ ...prevError, email: "Invalid Email" }));
+            setError(prevError => ({...prevError, email: "Invalid Email"}));
             hasError = true;
         }
         if (validator.isEmpty(form.password)) {
-            setError(prevError => ({ ...prevError, password: "Password cannot be empty!" }));
+            setError(prevError => ({...prevError, password: "Password cannot be empty!"}));
             hasError = true;
         }
 
@@ -55,11 +55,12 @@ export default function LoginForm({ className }) {
         <>
             <div className="card-wrapper ">
                 <div className="flex justify-center mb-5 xl:mb-8">
-                    <h4 className="text-dark/80 text-h5 xl:text-h4 font-semibold font-primary">Sign In To Beaconhouse</h4>
+                    <h4 className="text-dark/80 text-h5 xl:text-h4 font-semibold font-primary">Sign In To
+                        Beaconhouse</h4>
                 </div>
 
                 <div className='w-full flex flex-col gap-y-4 xl:gap-y-6'>
-                    <div >
+                    <div>
                         <InputField
                             rounded={true}
                             className="placeholder:text-lg"
@@ -95,8 +96,9 @@ export default function LoginForm({ className }) {
                                 type="checkbox"
                                 className="peer hidden"
                             />
-                                  
-                            <span className="peer-checked:inline-block hidden w-[12px] h-[7px] border-t-2 border-r-2 rotate-[130deg] translate-x-[3px] -translate-y-[5px] border-blue-dark2 cursor-pointer"></span>
+
+                            <span
+                                className="peer-checked:inline-block hidden w-[12px] h-[7px] border-t-2 border-r-2 rotate-[130deg] translate-x-[3px] -translate-y-[5px] border-blue-dark2 cursor-pointer"></span>
 
                         </div>
                         <span
