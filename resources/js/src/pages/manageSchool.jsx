@@ -71,17 +71,6 @@ const ManageSchool = () => {
                         <div
                             className={`grid grid-flow-row gap-y-8 lg:gap-y-12 gap-x-5 md:gap-x-10 lg:gap-x-15 3xl:gap-x-20 ${team.region !== "" ? "lg:grid-cols-2 grid-cols-1" : "grid-cols-1"}`}>
                             <div className="w-full">
-
-                                <Button
-                                    icon={assets.plus}
-                                    rounded={false}
-                                    type="button"
-                                    title="Add Region"
-                                    color={"blue-dark2"}
-                                    className="font-medium text-sm mb-3 min-w-[130px] justify-start"
-                                    onClick={openModal}
-                                />
-
                                 <Team
                                     items={region}
                                     title="Select Region"
@@ -93,15 +82,6 @@ const ManageSchool = () => {
                             {team.region !== "" ? (
 
                                 <div className="w-full">
-                                    <Button
-                                        icon={assets.plus}
-                                        rounded={false}
-                                        type="button"
-                                        title="Add Cluster"
-                                        color={"blue-dark2"}
-                                        className="font-medium text-sm mb-3"
-                                        onClick={openModal}
-                                    />
 
                                     <Team
                                         items={cluster}
@@ -115,17 +95,6 @@ const ManageSchool = () => {
                             {team.cluster !== "" ? (
 
                                 <div className="w-full">
-
-                                    <Button
-                                        icon={assets.plus}
-                                        rounded={false}
-                                        type="button"
-                                        title="Add City"
-                                        color={"blue-dark2"}
-                                        className="font-medium text-sm mb-3"
-                                        onClick={openModal}
-                                    />
-
                                     <Team
                                         items={city}
                                         title="Select City"
@@ -137,15 +106,7 @@ const ManageSchool = () => {
 
                             {team.city !== "" ? (
                                 <div className="w-full">
-                                    <Button
-                                        icon={assets.plus}
-                                        rounded={false}
-                                        type="button"
-                                        title="Add Branch"
-                                        color={"blue-dark2"}
-                                        className="font-medium text-sm mb-3"
-                                        onClick={openModal}
-                                    />
+
                                     <Team
                                         items={branch}
                                         title="Select Branch"
@@ -158,16 +119,6 @@ const ManageSchool = () => {
                             {team.branch !== "" ? (
 
                                 <div className="w-full">
-                                    <Button
-                                        icon={assets.plus}
-                                        rounded={false}
-                                        type="button"
-                                        title="Add Level"
-                                        color={"blue-dark2"}
-                                        className="font-medium text-sm mb-3"
-                                        onClick={openModal}
-                                    />
-
                                     <MultiSelectionTeam
                                         items={level}
                                         title="Select Level"

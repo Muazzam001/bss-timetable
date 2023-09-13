@@ -22,7 +22,8 @@ const InputField = ({
                     {label}
                 </label>
             ) : null}
-            <div className="relative mt-1 max-lg:flex-auto">
+            
+            <div className="relative max-lg:flex-auto">
                 {icon ? (
                     <div
                         className="pointer-events-none absolute inset-y-2 rounded-full left-3 h-9 w-9 flex items-center justify-center p-[5px] bg-blue-light2">
@@ -32,7 +33,7 @@ const InputField = ({
                 <input
                     type={type}
                     name={name}
-                    className={`inline-block w-full ${rounded ? "rounded-full" : "rounded-lg"} font-primary placeholder:font-primary border-gray-medium ${disabled ? "cursor-not-allowed placeholder:text-gray-medium" : "hover:border-blue-medium1"} hover:outline-0 hover:ring-0 focus:outline-0 focus:ring-0 bg-gray-light py-4 ${icon ? "pl-15" : "pl-5"} sm:text-sm ${className}`}
+                    className={`inline-block font-primary placeholder:font-primary border-gray-medium hover:outline-0 hover:ring-0 focus:outline-0 focus:ring-0 bg-gray-light sm:text-sm pr-4 py-2 ${rounded ? "rounded-full" : "rounded-lg"} ${disabled ? "cursor-not-allowed placeholder:text-gray-medium" : "hover:border-blue-medium1"} ${icon ? "pl-15" : "pl-4"} ${className}`}
                     placeholder={placeholder}
                     value={value}
                     onChange={onChange}

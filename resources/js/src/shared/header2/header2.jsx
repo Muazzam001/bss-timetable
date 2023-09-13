@@ -27,7 +27,9 @@ const Header2 = ({ headerItem }) => {
 
     return (
         <header className="text-gray-600 body-font bg-white">
-            <div className="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
+
+            <div className="px-10 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+
                 <NavLink className="flex items-center py-2">
                     <Image src={assets.logo} alt="" className="w-16"/>
                 </NavLink>

@@ -8,7 +8,10 @@ const MainLayout = ({ children, headerItem }) => {
         <>
             <HeaderTop/>
             <Header2 headerItem={headerItem}/>
-            {children}
+            <main className='bg-gray-light-yellowish'>
+                {children}
+            </main>
+
             <Footer />
         </>
     )
