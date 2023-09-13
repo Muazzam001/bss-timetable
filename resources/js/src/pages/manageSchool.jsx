@@ -134,7 +134,7 @@ const ManageSchool = () => {
                             <Button
                                 rounded={true}
                                 type="button"
-                                title="Finished & Next"
+                                title="Next"
                                 color={"blue-dark2"}
                                 className="px-18 py-3"
                                 onClick={() => navigate("/timetable-whole")}

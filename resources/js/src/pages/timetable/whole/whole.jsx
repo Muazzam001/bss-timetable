@@ -30,49 +30,60 @@ const Whole = () => {
                 <div className='container grid grid-flow-col items-center grid-cols-12 gap-3 '>
 
                     <div className='col-span-5 grid grid-flow-col gap-3'>
-                        <InputField
-                            placeholder="ROC"
-                            className="h-10 w-full"
-                            disabled
-                        />
+                        <div className=''>
+                            <InputField
+                                placeholder="ROC"
+                                className="h-10 w-full"
+                                disabled
+                            />
+                        </div>
 
-                        <InputField
-                            placeholder="ROC"
-                            className="h-10 w-full"
-                            disabled
-                        />
+                        <div className=''>
+                            <InputField
+                                placeholder="Cluster 5"
+                                className="h-10 w-full"
+                                disabled
+                            />
+                        </div>
 
-                        <InputField
-                            placeholder="ROC"
-                            className="h-10 w-full"
-                            disabled
-                        />
+                        <div className=''>
+                            <InputField
+                                placeholder="TNS Defence, Lahore"
+                                className="h-10 w-full"
+                                disabled
+                            />
+                        </div>
 
-                        <InputField
-                            placeholder="ROC"
-                            className="h-10 w-full"
-                            disabled
-                        />
                     </div>
 
-                    <div className='col-span-6 grid grid-flow-col gap-3'>
-                        <InputSelect
-                            width={"100%"}
-                            className="min-w-[200px]"
-                            options={cluster}
-                            defaultValue="year"
-                            value={teamLevel}
-                            setState={setTeamLevel}
-                        />
+                    <div className='col-span-6 grid grid-flow-col grid-cols-3 gap-3'>
+                        <div className='col-span-2'>
+                            <InputSelect
+                                width={"100%"}
+                                className="min-w-[200px]"
+                                options={level}
+                                defaultValue="year"
+                                value={year}
+                                setState={setYear}
+                            />
 
-                        <InputSelect
-                            width={"100%"}
-                            className="min-w-[200px]"
-                            options={level}
-                            defaultValue="year"
-                            value={year}
-                            setState={setYear}
-                        />
+                            {/*<InputSelect*/}
+                            {/*    width={"100%"}*/}
+                            {/*    className="min-w-[200px]"*/}
+                            {/*    options={cluster}*/}
+                            {/*    defaultValue="year"*/}
+                            {/*    value={teamLevel}*/}
+                            {/*    setState={setTeamLevel}*/}
+                            {/*/>*/}
+                        </div>
+
+                        <div className=''>
+                            <InputField
+                                placeholder="Academic Year 2024"
+                                className="h-10 w-full"
+                                disabled
+                            />
+                        </div>
                     </div>
 
                     <div className='col-span-1'>
