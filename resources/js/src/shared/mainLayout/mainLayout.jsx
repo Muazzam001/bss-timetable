@@ -9,8 +9,9 @@ const MainLayout = ({ children, headerItem }) => {
             <HeaderTop/>
             <Header2 headerItem={headerItem}/>
             <main className='bg-gray-light-yellowish'>
-            {children}
+                {children}
             </main>
+
             <Footer />
         </>
     )

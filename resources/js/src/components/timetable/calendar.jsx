@@ -23,6 +23,7 @@ const Calendar = () => {
             const title = calendarApi.view.title;
             const newDate = new Date(title)
             const dayName = new Date(title).toLocaleString('en-us', { weekday: 'long' })
+
             setDayName(dayName)
             const year = newDate.getFullYear();
             setYear(year)
@@ -30,6 +31,7 @@ const Calendar = () => {
     }, []);
 
     const data = [
+
         ['CHE', 'UDR', 'MTH', '', 'ENG', 'ISL', 'PST', '', 'CS', 'ECO'],
         ['CHE', 'UDR', 'MTH', '', 'ENG', 'ISL', 'PST', '', 'CS', 'ECO'],
         ['PST', 'BIO', 'CS', '', 'UDR', 'CHE', 'UDR', '', 'PHY', 'ENG'],
@@ -38,16 +40,19 @@ const Calendar = () => {
         ['CHE', 'UDR', 'MTH', '', 'ENG', 'ISL', 'PST', '', 'CS', 'ECO'],
         ['CHE', 'ENG', 'ISL', '', 'BIO', 'CS', 'UDR', '', 'PHY', 'UDR'],
         ['ENG', 'ISL', 'PST', '', 'CS', 'ECO', 'CHE', '', 'MTH', 'PHY'],
+
     ];
 
     const CalendarHeader = () => {
         return (
+
             <div className='flex justify-between items-center bg-white border border-gray-medium border-b-0 mt-5'>
                 <div className='flex items-center gap-5 py-2 pl-16'>
 
                     <Image src={assets.calendar1} alt="calendar icon" className="w-8" />
                     <span className='font-primary font-semibold'>Timetable</span>
                     {/* <div className='flex items-center gap-1'>
+
                         <span className='font-primary font-semibold'>{dayName}</span>
                         <ArrowLeft
                             className="cursor-pointer hover:bg-blue-light1 rounded-md"
@@ -63,8 +68,10 @@ const Calendar = () => {
                                 calenderNext.next();
                             }}/>
                         <span className='font-primary'>{year}</span>
+
                     </div> */}
                     {/* <div className='ml-5'>
+
                         <button className='bg-blue-dark2 text-white px-4 py-1 font-primary' onClick={() => {
                             const calenderNext = calendarRef.current.getApi();
                             calenderNext.changeView('dayGridDay')
@@ -79,6 +86,7 @@ const Calendar = () => {
                             disabled
                         >Week
                         </button>
+
                     </div> */}
                 </div>
                 <div className='pr-5 flex items-center gap-8'>
@@ -104,6 +112,7 @@ const Calendar = () => {
                             <span className='-translate-y-8'>Timetable Options</span>
                             <Image src={assets.calendar} alt="" className="w-8 -translate-y-2" />
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -182,6 +191,7 @@ const Calendar = () => {
 
                 headerToolbar={false}
                 firstDay={1}
+
                 customButtons={{
                     customDay: {
                         text: `${dayName}`,
@@ -192,6 +202,7 @@ const Calendar = () => {
 
                 }}
                 dayHeaderContent={(info) => {
+
                     const currentDate = info.date
                     const options = { weekday: 'long' };
                     const dayName = currentDate.toLocaleDateString('en-US', options);
@@ -223,6 +234,7 @@ const Calendar = () => {
                     //         </div>
                     //     </div>
                     // )
+
                 }}
             />
         </div>

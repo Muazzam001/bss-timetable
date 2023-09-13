@@ -6,6 +6,7 @@ import InputBase from '@mui/material/InputBase';
 import { styled } from '@mui/material/styles';
 
 const InputSelect = ({ options, className, defaultValue, setState, value, width, disabled, label }) => {
+
     const BootstrapInput = styled(InputBase)(({ theme }) => ({
 
         'label + &': {
@@ -103,6 +104,14 @@ const InputSelect = ({ options, className, defaultValue, setState, value, width,
                                         color: "white"
                                     }
                                 },
+
+                            },
+                            '& .MuiMenuItem-root:first-of-type': {
+                                bgcolor: "#F7F7F6",
+                                '&:hover': {
+                                    bgcolor: "#175088",
+                                    color: "white"
+                                }
                             },
                         },
                     }}

@@ -7,6 +7,7 @@ import ManageSchool from './pages/manageSchool';
 import Whole from './pages/timetable/whole/whole';
 import SelectTimetable from './pages/timetable/selectTimetable/selectTimetable';
 
+
 class AppRoutes extends React.Component {
 	render() {
 		return (
