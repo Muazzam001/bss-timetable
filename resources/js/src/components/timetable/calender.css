@@ -14,26 +14,10 @@
     max-height: 57px !important;
 }
 
-/* 
-.fc-daygrid-day-frame.fc-scrollgrid-sync-inner{
-    height: 200px !important;
-} */
-
-/* .fc .fc-daygrid-day-frame {
-    min-height: fit-content !important;
-    max-height: fit-content !important;
-} */
-
-/* .fc-scrollgrid.fc-scrollgrid-liquid>tbody {
-    min-height: fit-content !important;
-    max-height: fit-content !important;
-} */
-
-/* .fc-view-harness.fc-view-harness-active {
-    min-height: fit-content !important;
-    max-height: fit-content !important;
-} */
-
 .table-inner{
     border: 2px solid !important;
+}
+
+.fc-col-header-cell-cushion {
+    padding-block: 14px !important;
 }

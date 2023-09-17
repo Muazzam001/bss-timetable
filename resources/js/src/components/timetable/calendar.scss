@@ -40,4 +40,9 @@
 .fc-dayGridDay-button.fc-button.fc-button-primary {
     @apply bg-blue-dark2;
 }
-
+.fc.fc-media-screen.fc-direction-ltr.fc-theme-standard {
+    @apply w-[calc(100vw-32px)]
+}
+.fc-col-header-cell-cushion{
+    @apply py-3
+}

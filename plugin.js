@@ -157,8 +157,9 @@ export default plugin(
                     'yellow-medium': "#FFAC1C",
                     'yellow-dark': "#E39E2F",
                     
-                    // maroon
-                    'maroon': "#CA4B4B",
+                    // modal
+                    'warning': "#CA4B4B",
+                    'success': "#2E792E",
                     
                     // Subjects
                     'chemistry': "#997D6C",

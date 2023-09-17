@@ -60,33 +60,29 @@ export default function LoginForm({className}) {
                 </div>
 
                 <div className='w-full flex flex-col gap-y-4 xl:gap-y-6'>
-                    <div>
-                        <InputField
-                            rounded={true}
-                            className="placeholder:text-lg"
-                            icon={assets.envelope}
-                            type="email"
-                            name="email"
-                            placeholder="example@gmail.com"
-                            value={form?.email}
-                            onChange={(e) => handleChange(e.target.value, "email")}
-                            error={error.email}
-                        />
-                    </div>
+                    <InputField
+                        rounded={true}
+                        className="placeholder:text-lg"
+                        icon={assets.envelope}
+                        type="email"
+                        name="email"
+                        placeholder="example@gmail.com"
+                        value={form?.email}
+                        onChange={(e) => handleChange(e.target.value, "email")}
+                        error={error.email}
+                    />
 
-                    <div>
-                        <InputField
-                            rounded={true}
-                            className="placeholder:text-lg"
-                            icon={assets.lock}
-                            type="password"
-                            name="password"
-                            placeholder="********"
-                            value={form.password}
-                            onChange={(e) => handleChange(e.target.value, "password")}
-                            error={error.password}
-                        />
-                    </div>
+                    <InputField
+                        rounded={true}
+                        className="placeholder:text-lg"
+                        icon={assets.lock}
+                        type="password"
+                        name="password"
+                        placeholder="********"
+                        value={form.password}
+                        onChange={(e) => handleChange(e.target.value, "password")}
+                        error={error.password}
+                    />
 
                     <label htmlFor="remember-me" className="flex items-center ml-4">
                         <div className="border border-blue-medium1 w-5 h-5 rounded cursor-pointer z-50">
@@ -96,16 +92,15 @@ export default function LoginForm({className}) {
                                 type="checkbox"
                                 className="peer hidden"
                             />
-                                  
+
                             <span className="peer-checked:inline-block hidden w-[12px] h-[7px] border-t-2 border-r-2 rotate-[130deg] translate-x-[3px] -translate-y-[5px] border-blue-dark2 cursor-pointer"></span>
 
                         </div>
-                        <span
-                            className="ml-2 block text-sm text-gray-900 font-primary cursor-pointer">
+
+                        <span className="ml-2 block text-sm text-gray-900 font-primary cursor-pointer">
                             Remember me
                         </span>
                     </label>
-
 
                     {/* Sign In & Forgot Password Buttons */}
                     <div className="flex flex-col max-xl:gap-y-4 xl:gap-y-6">
@@ -114,8 +109,8 @@ export default function LoginForm({className}) {
                             type="submit"
                             title="Sign In"
                             color="blue-medium1"
-                            onClick={handleLogin}
                             className="p-3"
+                            onClick={handleLogin}
                         />
 
                         <Button

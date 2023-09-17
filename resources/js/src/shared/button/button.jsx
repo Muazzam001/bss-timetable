@@ -21,7 +21,7 @@ const Button = ({ className, title, type, onClick, color, icon, rounded, hover }
   return (
     <button
       type={type}
-      className={`group flex items-center gap-x-2 font-primary font-bold text-white text-base p-2 border-2 border-transparent ${rounded ? "rounded-full" : "rounded-lg"} shadow-sm ${className} ${hover === false ? null : buttonColor} justify-center`}
+      className={`group flex items-center gap-x-2 font-primary font-medium text-white text-base p-2 border-2 border-transparent ${rounded ? "rounded-full" : "rounded-lg"} shadow-sm ${className} ${hover === false ? null : buttonColor} justify-center`}
       onClick={onClick}
     >
       {icon ? (

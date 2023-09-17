@@ -36,6 +36,8 @@ import deadline from "./images/deadline.png"
 import control from "./images/control.png"
 import choose from "./images/choose.png"
 import calendar from "./images/calendar.png"
+import okbro from "./images/Ok-bro.png"
+import tooltip from "./images/tooltip.png"
 
 
 export const assets = {
@@ -77,4 +79,6 @@ export const assets = {
     expand,
     control,
     deadline,
+    okbro,
+    tooltip,
 }
