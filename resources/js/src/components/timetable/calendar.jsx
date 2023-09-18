@@ -159,7 +159,7 @@ const Calendar = () => {
                 </div>
                 <div className='bg-white border-l border-t border-gray-dark2'>
                     <div className='w-[300px]'>
-                        <div className='flex items-end h-[55.4px]'>
+                        <div className='flex items-end h-[56px]'>
                             <div className='flex justify-center bg-blue-dark2 px-2 py-1 w-full'>
                                 <p className='border-r border-white text-xs font-primary font-normal text-white px-5'>New
                                     Lesson</p>
