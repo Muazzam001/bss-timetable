@@ -44,12 +44,7 @@ const InputSelect = ({options, className, defaultValue, value, width, disabled, 
         <>
             <div className="relative max-lg:flex-auto">
                 {label ? (
-                    <label className="text-xs font-medium leading-6 !text-dark-gray-200 font-primary">
-                        {label}
-                    </label>
-                ) : null}
-                {label ? (
-                    <label className="text-xs font-medium leading-6 !text-dark-gray-200 font-primary">
+                    <label className="text-sm font-medium leading-6 !text-dark-gray-200 font-primary">
                         {label}
                     </label>
                 ) : null}
