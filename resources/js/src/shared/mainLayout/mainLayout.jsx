@@ -3,7 +3,7 @@ import Footer from '../footer/footer';
 import Header2 from '../header2/header2';
 import HeaderTop from '../headerTop/headerTop';
 
-const MainLayout = ({ children, headerItem }) => {
+const MainLayout = ({children, headerItem}) => {
     return (
         <>
             <HeaderTop/>
@@ -12,7 +12,7 @@ const MainLayout = ({ children, headerItem }) => {
                 {children}
             </main>
 
-            <Footer />
+            <Footer/>
         </>
     )
 }

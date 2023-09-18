@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import InputField from '@/src/shared/input/inputField';
 import MainLayout from '@/src/shared/mainLayout/mainLayout';
 import Button from '@/src/shared/button/button';

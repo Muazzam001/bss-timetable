@@ -5,7 +5,6 @@ import ArrowRight from '@/assets/icons/arrowRight';
 import InputSelect from '../inputSelect/inputSelect';
 
 const ManageLesson = ({options, icon, text, value, setState, setIsOpen}) => {
-    const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"];
 
     return (
         <div className='container flex justify-end xl:px-1'>

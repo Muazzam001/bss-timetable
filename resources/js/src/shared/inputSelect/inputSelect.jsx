@@ -2,11 +2,11 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InputBase from '@mui/material/InputBase';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import { styled } from '@mui/material/styles';
+import {styled} from '@mui/material/styles';
 
-const InputSelect = ({ options, className, defaultValue, value, width, disabled, label, onChange }) => {
+const InputSelect = ({options, className, defaultValue, value, width, disabled, label, onChange}) => {
 
-    const BootstrapInput = styled(InputBase)(({ theme }) => ({
+    const BootstrapInput = styled(InputBase)(({theme}) => ({
 
         'label + &': {
             width: `${width}`,
@@ -35,8 +35,8 @@ const InputSelect = ({ options, className, defaultValue, value, width, disabled,
 
     const optionItems = options?.map((item, index) => {
         return (
-            <MenuItem key={`${index}`} sx={{ width: `${width}` }} value={item}
-                className='z-50 whitespace-normal'>{item}</MenuItem>
+            <MenuItem key={`${index}`} sx={{width: `${width}`}} value={item}
+                      className='z-50 whitespace-normal'>{item}</MenuItem>
         )
     });
 
@@ -48,12 +48,18 @@ const InputSelect = ({ options, className, defaultValue, value, width, disabled,
                         {label}
                     </label>
                 ) : null}
+                {label ? (
+                    <label className="text-xs font-medium leading-6 !text-dark-gray-200 font-primary">
+                        {label}
+                    </label>
+                ) : null}
                 <Select
                     value={value}
                     onChange={onChange}
-                    className={`bg-transparent z-50 border-0 h-13 text-xs ${className}`}
-                    sx={{ width: `${width}` }}
-                    input={<BootstrapInput />}
+                    className={`bg-transparent z-50 border-0 h-10 text-xs ${className}`}
+                    sx={{width: `${width}`}}
+                    input={<BootstrapInput/>}
+
                     defaultValue={defaultValue ? defaultValue : ""}
                     IconComponent={ExpandMoreIcon}
                     disabled={disabled && disabled}
@@ -70,7 +76,7 @@ const InputSelect = ({ options, className, defaultValue, value, width, disabled,
                                 '& .MuiList-root': {
                                     padding: 0,
                                     minWidth: "fit-content",
-                                    width: { width },
+                                    width: {width},
                                 },
                                 '& .MuiButtonBase-root': {
                                     whiteSpace: "normal",

@@ -5,5 +5,5 @@ import Index from './src/index.jsx';
 import './../scss/app.scss';
 
 if (document.getElementById('app')) {
-	createRoot(document.getElementById('app')).render(<Index />);
+    createRoot(document.getElementById('app')).render(<Index/>);
 }

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import InputField from '../../shared/input/inputField';
 import Button from '../../shared/button/button';
-import { assets } from '@/assets';
+import {assets} from '@/assets';
 import validator from 'validator';
-import { NavLink, useNavigate } from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 import './signIn.scss';
 
-const ForgotPasswordForm = ({ className }) => {
+const ForgotPasswordForm = ({className}) => {
     const navigate = useNavigate();
 
     const [email, setEmail] = useState("")
@@ -40,7 +40,8 @@ const ForgotPasswordForm = ({ className }) => {
             <div className="card-wrapper ">
                 <div className="flex flex-col gap-y-2 items-center justify-center">
                     <h4 className='text-dark/80 text-h5 xl:text-h4 font-semibold font-primary'>Reset your password?</h4>
-                    <p className='text-dark/80 text-sm xl:text-md font-primary'>We’ll help you reset it and get back on track.</p>
+                    <p className='text-dark/80 text-sm xl:text-md font-primary'>We’ll help you reset it and get back on
+                        track.</p>
                 </div>
 
                 <div className="flex flex-col gap-y-8 xl:gap-y-10 w-full">
@@ -72,7 +73,8 @@ const ForgotPasswordForm = ({ className }) => {
 
                     <div className='text-center text-md xl:text-base'>
                         <span className='text-gray-dark1 font-primary text-sm'> Already have an account? </span>
-                        <NavLink to="/" className='text-blue-dark1 font-semibold cursor-pointer font-primary text-sm'>Return to Sign In</NavLink>
+                        <NavLink to="/" className='text-blue-dark1 font-semibold cursor-pointer font-primary text-sm'>Return
+                            to Sign In</NavLink>
                     </div>
                 </div>
             </div>

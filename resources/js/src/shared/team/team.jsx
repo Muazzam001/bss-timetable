@@ -1,4 +1,3 @@
-
 const Team = ({items, title, name, onChange}) => {
 
     const teamData = items?.map((teamName, index) => {

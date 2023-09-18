@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import InputField from '@/src/shared/input/inputField';
 import MainLayout from '@/src/shared/mainLayout/mainLayout';
 import InputSelect from '@/src/shared/inputSelect/inputSelect';
@@ -7,9 +7,45 @@ import { assets } from '@/assets';
 import ManageLesson from '@/src/shared/manageLesson/manageLesson';
 import Calendar from '@/src/components/timetable/calendar';
 import SideModal from '@/src/shared/sideModal/sideModal';
-import { stopScroll } from '@/src/utils/utils';
+import {stopScroll} from '@/src/utils/utils';
 import Processing from '@/src/shared/processing/processing';
 import MainModal from '@/src/shared/mainModal/mainModal';
+// import PropTypes from 'prop-types';
+// import Tabs from '@mui/material/Tabs';
+// import Tab from '@mui/material/Tab';
+// import Typography from '@mui/material/Typography';
+// import Box from '@mui/material/Box';
+
+// function CustomTabPanel(props) {
+//     const { children, value, index, ...other } = props;
+
+//     return (
+//         <div
+//             role="tabpanel"
+//             hidden={value !== index}
+//             id={`simple-tabpanel-${index}`}
+//             aria-labelledby={`simple-tab-${index}`}
+//             {...other}
+//         >
+//             {value === index && (
+//                 <Box sx={{ p: 3 }}>
+//                     <Typography>{children}</Typography>
+//                 </Box>
+//             )}
+//         </div>
+//     );
+// }
+// CustomTabPanel.propTypes = {
+//     children: PropTypes.node,
+//     index: PropTypes.number.isRequired,
+//     value: PropTypes.number.isRequired,
+// };
+// function a11yProps(index) {
+//     return {
+//         id: `simple-tab-${index}`,
+//         'aria-controls': `simple-tabpanel-${index}`,
+//     };
+// }
 
 const Whole = () => {
     const [calendarDisplay, setCalendarDisplay] = useState(false)
@@ -21,7 +57,8 @@ const Whole = () => {
     const [option, setOption] = useState("")
     const [type, setType] = useState("")
     // const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
-    const level = ["Early Year - Co-Education", "Early Year - Boys", "Low Primary - Co-Education", "Primary - Co-Education", "Primary - Girls", "Primary - Boys", "IB School - Co-Education", "Secondary School - Co-Education", "Secondary School - Boys", "Secondary School - Girls", "All / Whole"]
+    const level = ["Default", "Winter - Default"]
+
     const Menus = [
         { title: "Home", src: assets.home },
         { title: "Subjects", src: assets.subject },
@@ -39,7 +76,11 @@ const Whole = () => {
     const duplicateOption = ["Lession Setting and Data", "Lession Setting Only"];
     const duplicateType = ['Default', 'Advance - Tution'];
 
+    // const [value, setValue] = React.useState(0);
 
+    // const handleChange = (event, newValue) => {
+    //     setValue(newValue);
+    // };
 
     return (
         <MainLayout headerItem={Menus}>
@@ -111,7 +152,7 @@ const Whole = () => {
                             type="button"
                             title="Reset & Manage"
                             color={"blue-dark2"}
-                            className="text-sm h-13 min-w-[150px] justify-start"
+                            className="font-medium text-sm h-10 min-w-[150px] justify-start"
                             onClick={() => setCalendarDisplay(true)}
                         />
                     </div>
@@ -129,11 +170,12 @@ const Whole = () => {
 
                 {calendarDisplay ? (
                     <div>
-                        <Calendar />
+                        <Calendar/>
                     </div>
                 ) : (
                     <div className='flex justify-center pb-20'>
-                        <Processing image={assets.loading} label="Please select timetable above option" btnColor="bg-warning" />
+                        <Processing image={assets.loading} label="Please select timetable above option"
+                                    btnColor="bg-warning"/>
                     </div>
                 )}
             </div>
@@ -142,7 +184,7 @@ const Whole = () => {
                 open={open}
                 setOpen={setOpen}
                 image={assets.okbro}
-                label="Duplicated timetable successfully has been created “Winter”."
+                label="Duplicated timetable successfully has beed created “Winter”."
                 btnColor="bg-success"
                 border
             >
@@ -162,7 +204,7 @@ const Whole = () => {
                         <InputField
                             label="Duplicate Name"
                             placeholder="Type Duplicate Name"
-                            className="w-full"
+                            className="h-10 w-full"
                             value={duplicateName}
                             onChange={(e) => setDuplicateName(e.target.value)}
                         />
@@ -211,6 +253,28 @@ const Whole = () => {
                         />
                     </div>
                 </section>
+
+                {/* <section>
+                    <Box sx={{ width: '100%' }}>
+                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                <Tab label="Item One" {...a11yProps(0)}/>
+                                <Tab label="Item Two" {...a11yProps(1)} />
+                                <Tab label="Item Three" {...a11yProps(2)} />
+                            </Tabs>
+                        </Box>
+                        <CustomTabPanel value={value} index={0}>
+                            Item One
+                        </CustomTabPanel>
+                        <CustomTabPanel value={value} index={1}>
+                            Item Two
+                        </CustomTabPanel>
+                        <CustomTabPanel value={value} index={2}>
+                            Item Three
+                        </CustomTabPanel>
+                    </Box>
+                </section> */}
+
             </SideModal>
         </MainLayout>
     )
