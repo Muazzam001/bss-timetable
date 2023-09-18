@@ -8,7 +8,6 @@ import DefaultSetting from '../defaultSetting';
 import TimetableOptions from '../timetableOptions';
 import Workload from '../workload';
 import './calendar.scss';
-import "./calender.css";
 
 const Calendar = () => {
     const calendarRef = useRef(null);
@@ -95,7 +94,7 @@ const Calendar = () => {
 
                                                     return (
                                                         <td key={cellIndex}
-                                                            className='font-primary text-xs uppercase w-20 h-20'>
+                                                            className='font-primary text-xs uppercase w-20 h-20 !text-center !align-middle'>
                                                             <div
                                                                 className={`flex flex-col ${cell === "" ? null : cellColor} rounded-sm py-1 text-white ${cell === "" ? null : "border"} border-blue-dark2`}>
                                                                 <span className='text-[8px]'>
