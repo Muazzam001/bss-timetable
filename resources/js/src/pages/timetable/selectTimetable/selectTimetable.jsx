@@ -3,8 +3,6 @@ import InputField from '@/src/shared/input/inputField';
 import MainLayout from '@/src/shared/mainLayout/mainLayout';
 import Button from '@/src/shared/button/button';
 import InputSelect from '@/src/shared/inputSelect/inputSelect';
-import { assets } from '@/assets';
-import Processing from '@/src/shared/processing/processing';
 
 const SelectTimetable = () => {
     const [teamLevel, setTeamLevel] = useState("")
@@ -42,7 +40,7 @@ const SelectTimetable = () => {
                         options={cluster}
                         defaultValue="year"
                         value={teamLevel}
-                        setState={setTeamLevel}
+                        onChange={(e) => setTeamLevel(e.target.value)}
                     />
 
                     <InputSelect
@@ -51,7 +49,7 @@ const SelectTimetable = () => {
                         options={level}
                         defaultValue="year"
                         value={year}
-                        setState={setYear}
+                        onChange={(e) => setYear(e.target.value)}
                     />
 
                     <Button
@@ -70,14 +68,10 @@ const SelectTimetable = () => {
                             options={level}
                             defaultValue="year"
                             value={year}
-                            setState={setYear}
+                            onChange={(e) => setYear(e.target.value)}
                         />
                     </div>
                 </div>
-            </div>
-
-            <div className='flex justify-center pb-20'>
-                <Processing image={assets.loading} label="Please select timetable above option"/>
             </div>
         </MainLayout>
     )
