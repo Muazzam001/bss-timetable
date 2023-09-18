@@ -81,9 +81,7 @@ const ManageSchool = () => {
                             </div>
 
                             {team.region !== "" ? (
-
                                 <div className="w-full">
-
                                     <Team
                                         items={cluster}
                                         title="Select Cluster"
@@ -94,7 +92,6 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.cluster !== "" ? (
-
                                 <div className="w-full">
                                     <Team
                                         items={city}
@@ -107,7 +104,6 @@ const ManageSchool = () => {
 
                             {team.city !== "" ? (
                                 <div className="w-full">
-
                                     <Team
                                         items={branch}
                                         title="Select Branch"
@@ -118,7 +114,6 @@ const ManageSchool = () => {
                             ) : null}
 
                             {team.branch !== "" ? (
-
                                 <div className="w-full">
                                     <MultiSelectionTeam
                                         items={level}

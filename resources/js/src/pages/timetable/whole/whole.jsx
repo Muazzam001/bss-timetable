@@ -3,7 +3,7 @@ import InputField from '@/src/shared/input/inputField';
 import MainLayout from '@/src/shared/mainLayout/mainLayout';
 import InputSelect from '@/src/shared/inputSelect/inputSelect';
 import Button from '@/src/shared/button/button';
-import { assets } from '@/assets';
+import {assets} from '@/assets';
 import ManageLesson from '@/src/shared/manageLesson/manageLesson';
 import Calendar from '@/src/components/timetable/calendar';
 import SideModal from '@/src/shared/sideModal/sideModal';
@@ -60,12 +60,12 @@ const Whole = () => {
     const level = ["Default", "Winter - Default"]
 
     const Menus = [
-        { title: "Home", src: assets.home },
-        { title: "Subjects", src: assets.subject },
-        { title: "Classes", src: assets.classes },
-        { title: "Classrooms", src: assets.classroom },
-        { title: "Teachers", src: assets.teacher2 },
-        { title: "Modules", src: assets.modules },
+        {title: "Home", src: assets.home},
+        {title: "Subjects", src: assets.subject},
+        {title: "Classes", src: assets.classes},
+        {title: "Classrooms", src: assets.classroom},
+        {title: "Teachers", src: assets.teacher2},
+        {title: "Modules", src: assets.modules},
     ];
 
     useEffect(() => {
@@ -89,7 +89,7 @@ const Whole = () => {
 
                 <div className='container grid grid-flow-col items-center grid-cols-12 gap-3 '>
 
-                    <div className='col-span-5 grid grid-flow-col gap-3'>
+                    <div className='col-span-5 grid grid-flow-col gap-3 items-center'>
                         <div>
                             <InputField
                                 placeholder="ROC"
@@ -116,17 +116,17 @@ const Whole = () => {
 
                     </div>
 
-                    <div className='col-span-6 grid grid-flow-col grid-cols-3 gap-3'>
-                        <div className='col-span-2'>
-                            <InputSelect
-                                width={"100%"}
-                                className="min-w-[200px]"
-                                options={level}
-                                defaultValue="year"
-                                value={year}
-                                onChange={(e) => setYear(e.target.value)}
-                            />
-
+                    <div className='col-span-6 grid grid-flow-col grid-cols-3 gap-3 items-center'>
+                            <div className='col-span-2 -mt-1'>
+                                <InputSelect
+                                    width={"100%"}
+                                    className="min-w-[200px]"
+                                    options={level}
+                                    defaultValue="year"
+                                    value={year}
+                                    onChange={(e) => setYear(e.target.value)}
+                                />
+                            </div>
                             {/*<InputSelect*/}
                             {/*    width={"100%"}*/}
                             {/*    className="min-w-[200px]"*/}
@@ -135,24 +135,22 @@ const Whole = () => {
                             {/*    value={teamLevel}*/}
                             {/* onChange={(e) => setTeamLevel(e.target.value)} */}
                             {/*/>*/}
-                        </div>
-
-                        <div>
-                            <InputField
-                                placeholder="Academic Year 2024"
-                                className="w-full"
-                                disabled
-                            />
-                        </div>
+                            <div>
+                                <InputField
+                                    placeholder="Academic Year 2024"
+                                    className="w-full"
+                                    disabled
+                                />
+                            </div>
                     </div>
 
-                    <div className='col-span-1'>
+                    <div className='col-span-1 flex items-center'>
                         <Button
                             rounded={false}
                             type="button"
                             title="Reset & Manage"
                             color={"blue-dark2"}
-                            className="font-medium text-sm h-10 min-w-[150px] justify-start"
+                            className="font-medium text-sm h-12 min-w-[150px] justify-start"
                             onClick={() => setCalendarDisplay(true)}
                         />
                     </div>

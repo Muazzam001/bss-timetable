@@ -28,7 +28,7 @@ const InputSelect = ({options, className, defaultValue, value, width, disabled, 
         '& .MuiSelect-select.css-1uwzc1h-MuiSelect-select-MuiInputBase-input': {
             display: "flex",
             alignItems: "center",
-            height: "46px",
+            height: "48px",
             fontSize: "14px",
         }
     }));
@@ -42,14 +42,9 @@ const InputSelect = ({options, className, defaultValue, value, width, disabled, 
 
     return (
         <>
-            <div className="relative max-lg:flex-auto">
+            <div className="relative max-lg:flex-auto flex flex-col gap-2">
                 {label ? (
-                    <label className="text-xs font-medium leading-6 !text-dark-gray-200 font-primary">
-                        {label}
-                    </label>
-                ) : null}
-                {label ? (
-                    <label className="text-xs font-medium leading-6 !text-dark-gray-200 font-primary">
+                    <label className="text-sm font-medium leading-6 !text-dark-gray-200 font-primary">
                         {label}
                     </label>
                 ) : null}
@@ -68,7 +63,7 @@ const InputSelect = ({options, className, defaultValue, value, width, disabled, 
                             sx: {
                                 bgcolor: 'transparent',
                                 boxShadow: "none",
-                                paddingX: "10px",
+                                paddingX: 0,
                                 zIndex: 100000000,
                                 '& .MuiPaper-root': {
                                     left: "0px",
@@ -86,9 +81,10 @@ const InputSelect = ({options, className, defaultValue, value, width, disabled, 
                                 },
                                 '& .MuiMenuItem-root': {
                                     fontSize: "14px",
-                                    whiteSpace: 'whitespace-normal',
+                                    whiteSpace: 'normal',
                                     color: "#7D7D92",
-                                    paddingX: 1,
+                                    paddingX: 2,
+                                    paddingY: 1.5,
                                     marginTop: "5px",
                                     marginBottom: "5px",
                                     bgcolor: "#F7F7F6",

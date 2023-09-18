@@ -16,14 +16,13 @@ const InputField = ({
                         disabled
                     }) => {
     return (
-        <div>
-            {label ? (
-                <label htmlFor={htmlFor} className="text-sm font-medium leading-6 !text-dark-gray-200 font-primary">
-                    {label}
-                </label>
-            ) : null}
-
-            <div className="relative max-lg:flex-auto">
+        <>
+            <div className="relative max-lg:flex-auto flex flex-col gap-1">
+                {label ? (
+                    <label htmlFor={htmlFor} className="text-sm font-medium leading-6 !text-dark-gray-200 font-primary">
+                        {label}
+                    </label>
+                ) : null}
                 {icon ? (
                     <span
                         className="pointer-events-none absolute inset-y-2 rounded-full left-3 h-9 w-9 flex items-center justify-center p-1 bg-blue-light2">
@@ -41,7 +40,7 @@ const InputField = ({
                 />
                 <p className='ml-5 text-red-500 text-xs font-primary'>{error}</p>
             </div>
-        </div>
+        </>
     )
 }
 

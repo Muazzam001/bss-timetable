@@ -12,15 +12,13 @@ const MultiSelectionTeam = ({items, title, name, onChange}) => {
     })
 
     return (
-        <div className='rounded-md border-[1.5px] border-gray-medium'>
+        <div className='rounded-md border-[1.5px] border-gray-medium bg-white'>
             <h2 className='font-primary p-3'>
                 {title}
             </h2>
 
-            <div className={`border-t-[1.5px] border-gray-medium`}>
-                <div className="flex flex-wrap justify-start flex-auto gap-4 p-3">
-                    {teamData}
-                </div>
+            <div className="border-t-[1.5px] border-gray-medium flex flex-wrap justify-start flex-auto gap-4 p-3">
+                {teamData}
             </div>
         </div>
     )
