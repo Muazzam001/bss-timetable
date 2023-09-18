@@ -3,6 +3,7 @@ import {Dialog, Transition} from '@headlessui/react'
 import Button from '../button/button';
 
 const ConfirmationModal = ({open, newValue, oldValue, confirm, setOpen}) => {
+
     return (
         <Transition.Root show={open} as={Fragment}>
             <Dialog as="div" className="relative z-50 " onClose={() => console.log("")}>
@@ -17,11 +18,13 @@ const ConfirmationModal = ({open, newValue, oldValue, confirm, setOpen}) => {
                             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                         >
+
                             <Dialog.Panel
                                 className={`relative transform rounded-lg bg-gray-light-bluish px-4 pt-5 pb-4 text-left transition-all sm:my-8 sm:p-6 border border-gray-dark2`}>
                                 <div className={`flex flex-col items-center w-[600px] p-5`}>
                                     <p className='font-primary'>Are you sure you want to change the count of lessons
                                         from {`${oldValue}`} to {`${newValue}`}?</p>
+
                                     <div className='flex gap-3 w-full justify-end mt-10 mr-20'>
                                         <Button
                                             title="No"
@@ -54,5 +57,6 @@ const ConfirmationModal = ({open, newValue, oldValue, confirm, setOpen}) => {
         </Transition.Root>
     )
 }
+
 
 export default ConfirmationModal

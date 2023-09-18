@@ -4,6 +4,7 @@ import "./inputSpinner.scss"
 
 const InputSpinner = ({min, max, value, setState, className, label}) => {
 
+
     const handleAgeChange = (event) => {
         const newValue = event.target.value;
         setState(newValue);
@@ -18,7 +19,7 @@ const InputSpinner = ({min, max, value, setState, className, label}) => {
             setState(value + 1)
         }
     }
-
+    
     const decreaseValue = () => {
         if (min !== undefined) {
             if (value > min) {

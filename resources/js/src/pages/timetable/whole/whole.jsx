@@ -3,7 +3,7 @@ import InputField from '@/src/shared/input/inputField';
 import MainLayout from '@/src/shared/mainLayout/mainLayout';
 import InputSelect from '@/src/shared/inputSelect/inputSelect';
 import Button from '@/src/shared/button/button';
-import {assets} from '@/assets';
+import { assets } from '@/assets';
 import ManageLesson from '@/src/shared/manageLesson/manageLesson';
 import Calendar from '@/src/components/timetable/calendar';
 import SideModal from '@/src/shared/sideModal/sideModal';
@@ -47,7 +47,6 @@ import MainModal from '@/src/shared/mainModal/mainModal';
 //     };
 // }
 
-
 const Whole = () => {
     const [calendarDisplay, setCalendarDisplay] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,13 +58,14 @@ const Whole = () => {
     const [type, setType] = useState("")
     // const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
     const level = ["Default", "Winter - Default"]
+
     const Menus = [
-        {title: "Home", src: assets.home},
-        {title: "Subjects", src: assets.subject},
-        {title: "Classes", src: assets.classes},
-        {title: "Classrooms", src: assets.classroom},
-        {title: "Teachers", src: assets.teacher2},
-        {title: "Modules", src: assets.modules},
+        { title: "Home", src: assets.home },
+        { title: "Subjects", src: assets.subject },
+        { title: "Classes", src: assets.classes },
+        { title: "Classrooms", src: assets.classroom },
+        { title: "Teachers", src: assets.teacher2 },
+        { title: "Modules", src: assets.modules },
     ];
 
     useEffect(() => {
@@ -81,7 +81,6 @@ const Whole = () => {
     // const handleChange = (event, newValue) => {
     //     setValue(newValue);
     // };
-
 
     return (
         <MainLayout headerItem={Menus}>
@@ -134,7 +133,6 @@ const Whole = () => {
                             {/*    options={cluster}*/}
                             {/*    defaultValue="year"*/}
                             {/*    value={teamLevel}*/}
-                            {/* onChange={(e) => setTeamLevel(e.target.value)} */}
                             {/* onChange={(e) => setTeamLevel(e.target.value)} */}
                             {/*/>*/}
                         </div>
@@ -210,6 +208,7 @@ const Whole = () => {
                             value={duplicateName}
                             onChange={(e) => setDuplicateName(e.target.value)}
                         />
+
                         <InputSelect
                             label="Duplicate Option"
                             width={"100%"}
@@ -220,6 +219,7 @@ const Whole = () => {
                             onChange={(e) => setOption(e.target.value)}
                             setState={setOption}
                         />
+
                         <InputSelect
                             label="Duplicate Type"
                             width={"100%"}
@@ -229,6 +229,7 @@ const Whole = () => {
                             value={type}
                             onChange={(e) => setType(e.target.value)}
                         />
+
                     </div>
 
                     <div className='flex gap-5 justify-end mt-10'>
@@ -252,6 +253,7 @@ const Whole = () => {
                         />
                     </div>
                 </section>
+
                 {/* <section>
                     <Box sx={{ width: '100%' }}>
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -272,6 +274,7 @@ const Whole = () => {
                         </CustomTabPanel>
                     </Box>
                 </section> */}
+
             </SideModal>
         </MainLayout>
     )

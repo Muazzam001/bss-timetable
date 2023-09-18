@@ -59,6 +59,7 @@ const InputSelect = ({options, className, defaultValue, value, width, disabled, 
                     className={`bg-transparent z-50 border-0 h-10 text-xs ${className}`}
                     sx={{width: `${width}`}}
                     input={<BootstrapInput/>}
+
                     defaultValue={defaultValue ? defaultValue : ""}
                     IconComponent={ExpandMoreIcon}
                     disabled={disabled && disabled}

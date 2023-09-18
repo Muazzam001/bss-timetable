@@ -23,7 +23,6 @@ const DefaultSetting = () => {
     const [newValue, setNewValue] = useState(0)
     const [confirm, setConfirm] = useState(false)
 
-
     const lessonOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     const numOfDays = [1, 2, 3, 4, 5, 6, 7]
 
@@ -123,6 +122,7 @@ const DefaultSetting = () => {
                 />
             </div>
 
+
             <div className='flex gap-1 items-center mt-5'>
                 <p className='text-sm font-primary'>Break Between Lesson</p>
                 <Image src={assets.tooltip} className="w-4 h-4"/>
@@ -137,7 +137,7 @@ const DefaultSetting = () => {
                 />
 
                 <InputSpinner
-                    label="Break Lemgth"
+                    label="Break Length"
                     className=""
                     min={0}
                     value={break2}

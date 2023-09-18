@@ -29,6 +29,7 @@ const ManageSchool = () => {
 
     const handleLevelChange = (target) => {
         const {value} = target;
+
         if (target.checked) {
             if (!teamLevel.includes(value)) {
                 setTeamLevel([...teamLevel, value]);
@@ -44,8 +45,8 @@ const ManageSchool = () => {
     };
     // Handle Change team value
     const handleChange = (target) => {
-        const {name, value} = target;
-        setTeam((prevTeam) => ({...prevTeam, [name]: value}))
+        const { name, value } = target;
+        setTeam((prevTeam) => ({ ...prevTeam, [name]: value }))
     }
 
     const region = ["ROC", "RON", "ROS"]

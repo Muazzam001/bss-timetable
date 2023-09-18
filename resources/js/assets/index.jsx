@@ -47,7 +47,6 @@ import relations from "./images/relations.png";
 import reportCard from "./images/report-card.png";
 import testing from "./images/testing.png";
 
-
 export const assets = {
     signIn,
     forgotPassword,

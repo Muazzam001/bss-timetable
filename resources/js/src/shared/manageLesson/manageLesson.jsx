@@ -5,6 +5,7 @@ import ArrowRight from '@/assets/icons/arrowRight';
 import InputSelect from '../inputSelect/inputSelect';
 
 const ManageLesson = ({options, icon, text, value, setState, setIsOpen}) => {
+
     return (
         <div className='container flex justify-end xl:px-1'>
             <div

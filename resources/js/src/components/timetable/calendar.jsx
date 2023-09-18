@@ -40,7 +40,6 @@ const Calendar = () => {
         ['ENG', 'ISL', 'PST', '', 'CS', 'ECO', 'CHE', '', 'MTH', 'PHY'],
     ];
 
-
     return (
         <div className="calendar-container px-4">
 
@@ -128,6 +127,7 @@ const Calendar = () => {
 
                             const currentDate = info.date
                             const options = {weekday: 'long'};
+
                             const dayName = currentDate.toLocaleDateString('en-US', options);
                             return (
                                 <span className='font-primary'>{dayName}</span>

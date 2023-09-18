@@ -4,7 +4,6 @@ import Image from '../image/image';
 
 const CalendarHeader = ({calendarRef, dayName, selectedTab, setSelectedTab}) => {
 
-
     const handleTabClick = (tabName) => {
         setSelectedTab(tabName);
     };
@@ -20,9 +19,11 @@ const CalendarHeader = ({calendarRef, dayName, selectedTab, setSelectedTab}) => 
         <>
 
             <div className='flex justify-between items-center bg-white border border-gray-medium border-b-0 mt-5'>
+      
                 <div className='flex items-center gap-5 py-2 pl-16'>
 
                     <Image src={assets.calendar1} alt="calendar icon" className="w-8"/>
+      
                     <span className='font-primary font-semibold'>Timetable</span>
                     {/* <div className='flex items-center gap-1'>
 
@@ -62,6 +63,7 @@ const CalendarHeader = ({calendarRef, dayName, selectedTab, setSelectedTab}) => 
 
                 </div> */}
                 </div>
+
                 <div className='pr-5 flex items-center gap-8'>
 
                     {/* <div className='flex items-center gap-3 pt-2'>
@@ -83,7 +85,9 @@ const CalendarHeader = ({calendarRef, dayName, selectedTab, setSelectedTab}) => 
                         </div>
 
                     </div> */}
+
                     <div className='flex items-center gap-3 pt-2 '>
+
                         {tabItems.map((tab, index) => (
                             <div
                                 key={index}
@@ -93,6 +97,7 @@ const CalendarHeader = ({calendarRef, dayName, selectedTab, setSelectedTab}) => 
                             >
                                 <span className='-translate-y-8'>{tab.name}</span>
                                 <Image src={tab.imageSrc} alt='' className={`w-8 -translate-y-2`}/>
+
                                 {selectedTab === tab.name && (
                                     <div className='absolute -bottom-6 w-full text-center'>
                                         <PlayArrowIcon className='text-blue-dark2 rotate-90 !w-5'/>
