@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import InputField from '@/src/shared/input/inputField';
 import MainLayout from '@/src/shared/mainLayout/mainLayout';
 import InputSelect from '@/src/shared/inputSelect/inputSelect';
@@ -6,13 +6,59 @@ import Button from '@/src/shared/button/button';
 import {assets} from '@/assets';
 import ManageLesson from '@/src/shared/manageLesson/manageLesson';
 import Calendar from '@/src/components/timetable/calendar';
+import SideModal from '@/src/shared/sideModal/sideModal';
+import {stopScroll} from '@/src/utils/utils';
+import Processing from '@/src/shared/processing/processing';
+import MainModal from '@/src/shared/mainModal/mainModal';
+// import PropTypes from 'prop-types';
+// import Tabs from '@mui/material/Tabs';
+// import Tab from '@mui/material/Tab';
+// import Typography from '@mui/material/Typography';
+// import Box from '@mui/material/Box';
+
+// function CustomTabPanel(props) {
+//     const { children, value, index, ...other } = props;
+
+//     return (
+//         <div
+//             role="tabpanel"
+//             hidden={value !== index}
+//             id={`simple-tabpanel-${index}`}
+//             aria-labelledby={`simple-tab-${index}`}
+//             {...other}
+//         >
+//             {value === index && (
+//                 <Box sx={{ p: 3 }}>
+//                     <Typography>{children}</Typography>
+//                 </Box>
+//             )}
+//         </div>
+//     );
+// }
+// CustomTabPanel.propTypes = {
+//     children: PropTypes.node,
+//     index: PropTypes.number.isRequired,
+//     value: PropTypes.number.isRequired,
+// };
+// function a11yProps(index) {
+//     return {
+//         id: `simple-tab-${index}`,
+//         'aria-controls': `simple-tabpanel-${index}`,
+//     };
+// }
+
 
 const Whole = () => {
-    const [teamLevel, setTeamLevel] = useState("")
+    const [calendarDisplay, setCalendarDisplay] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [duplicateName, setDuplicateName] = useState("");
+    const [open, setOpen] = useState(false)
     const [year, setYear] = useState("")
     const [lesson, setLesson] = useState("")
-    const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
-    const level = ["Early Year - Co-Education", "Early Year - Boys", "Low Primary - Co-Education", "Primary - Co-Education", "Primary - Girls", "Primary - Boys", "IB School - Co-Education", "Secondary School - Co-Education", "Secondary School - Boys", "Secondary School - Girls", "All / Whole"]
+    const [option, setOption] = useState("")
+    const [type, setType] = useState("")
+    // const cluster = ["Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6", "Cluster 7", "Cluster 8", "Cluster 9"]
+    const level = ["Default", "Winter - Default"]
     const Menus = [
         {title: "Home", src: assets.home},
         {title: "Subjects", src: assets.subject},
@@ -22,6 +68,21 @@ const Whole = () => {
         {title: "Modules", src: assets.modules},
     ];
 
+    useEffect(() => {
+        stopScroll(isModalOpen)
+    }, [isModalOpen])
+
+
+    const duplicateOption = ["Lession Setting and Data", "Lession Setting Only"];
+    const duplicateType = ['Default', 'Advance - Tution'];
+
+    // const [value, setValue] = React.useState(0);
+
+    // const handleChange = (event, newValue) => {
+    //     setValue(newValue);
+    // };
+
+
     return (
         <MainLayout headerItem={Menus}>
 
@@ -30,26 +91,26 @@ const Whole = () => {
                 <div className='container grid grid-flow-col items-center grid-cols-12 gap-3 '>
 
                     <div className='col-span-5 grid grid-flow-col gap-3'>
-                        <div className=''>
+                        <div>
                             <InputField
                                 placeholder="ROC"
-                                className="h-10 w-full"
+                                className="w-full"
                                 disabled
                             />
                         </div>
 
-                        <div className=''>
+                        <div>
                             <InputField
                                 placeholder="Cluster 5"
-                                className="h-10 w-full"
+                                className="w-full"
                                 disabled
                             />
                         </div>
 
-                        <div className=''>
+                        <div>
                             <InputField
                                 placeholder="TNS Defence, Lahore"
-                                className="h-10 w-full"
+                                className="w-full"
                                 disabled
                             />
                         </div>
@@ -64,7 +125,7 @@ const Whole = () => {
                                 options={level}
                                 defaultValue="year"
                                 value={year}
-                                setState={setYear}
+                                onChange={(e) => setYear(e.target.value)}
                             />
 
                             {/*<InputSelect*/}
@@ -73,14 +134,15 @@ const Whole = () => {
                             {/*    options={cluster}*/}
                             {/*    defaultValue="year"*/}
                             {/*    value={teamLevel}*/}
-                            {/*    setState={setTeamLevel}*/}
+                            {/* onChange={(e) => setTeamLevel(e.target.value)} */}
+                            {/* onChange={(e) => setTeamLevel(e.target.value)} */}
                             {/*/>*/}
                         </div>
 
-                        <div className=''>
+                        <div>
                             <InputField
                                 placeholder="Academic Year 2024"
-                                className="h-10 w-full"
+                                className="w-full"
                                 disabled
                             />
                         </div>
@@ -93,6 +155,7 @@ const Whole = () => {
                             title="Reset & Manage"
                             color={"blue-dark2"}
                             className="font-medium text-sm h-10 min-w-[150px] justify-start"
+                            onClick={() => setCalendarDisplay(true)}
                         />
                     </div>
 
@@ -104,10 +167,112 @@ const Whole = () => {
                     text={"Manage Lesson Slots"}
                     value={lesson}
                     setState={setLesson}
+                    setIsOpen={setIsModalOpen}
                 />
 
-                <Calendar/>
+                {calendarDisplay ? (
+                    <div>
+                        <Calendar/>
+                    </div>
+                ) : (
+                    <div className='flex justify-center pb-20'>
+                        <Processing image={assets.loading} label="Please select timetable above option"
+                                    btnColor="bg-warning"/>
+                    </div>
+                )}
             </div>
+
+            <MainModal
+                open={open}
+                setOpen={setOpen}
+                image={assets.okbro}
+                label="Duplicated timetable successfully has beed created “Winter”."
+                btnColor="bg-success"
+                border
+            >
+                <Button
+                    rounded={true}
+                    type="button"
+                    title="Ok"
+                    color={"blue-dark2"}
+                    className="px-18 py-3"
+                    onClick={() => setOpen(false)}
+                />
+            </MainModal>
+
+            <SideModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} title="Manage Duplicate Timetable">
+                <section className='w-[500px]'>
+                    <div className='flex flex-col gap-y-8'>
+                        <InputField
+                            label="Duplicate Name"
+                            placeholder="Type Duplicate Name"
+                            className="h-10 w-full"
+                            value={duplicateName}
+                            onChange={(e) => setDuplicateName(e.target.value)}
+                        />
+                        <InputSelect
+                            label="Duplicate Option"
+                            width={"100%"}
+                            className="min-w-[200px]"
+                            options={duplicateOption}
+                            defaultValue="year"
+                            value={option}
+                            onChange={(e) => setOption(e.target.value)}
+                            setState={setOption}
+                        />
+                        <InputSelect
+                            label="Duplicate Type"
+                            width={"100%"}
+                            className="min-w-[200px]"
+                            options={duplicateType}
+                            defaultValue="year"
+                            value={type}
+                            onChange={(e) => setType(e.target.value)}
+                        />
+                    </div>
+
+                    <div className='flex gap-5 justify-end mt-10'>
+                        <Button
+                            title="Cancel"
+                            rounded={true}
+                            hover={false}
+                            className="!px-8 !bg-gray-medium !text-black !text-sm"
+                        />
+
+                        <Button
+                            rounded={true}
+                            type="button"
+                            title="Generate Clone"
+                            color={"blue-dark2"}
+                            className="px-18 py-3"
+                            onClick={() => {
+                                setIsModalOpen(false)
+                                setOpen(true)
+                            }}
+                        />
+                    </div>
+                </section>
+                {/* <section>
+                    <Box sx={{ width: '100%' }}>
+                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                                <Tab label="Item One" {...a11yProps(0)}/>
+                                <Tab label="Item Two" {...a11yProps(1)} />
+                                <Tab label="Item Three" {...a11yProps(2)} />
+                            </Tabs>
+                        </Box>
+                        <CustomTabPanel value={value} index={0}>
+                            Item One
+                        </CustomTabPanel>
+                        <CustomTabPanel value={value} index={1}>
+                            Item Two
+                        </CustomTabPanel>
+                        <CustomTabPanel value={value} index={2}>
+                            Item Three
+                        </CustomTabPanel>
+                    </Box>
+                </section> */}
+            </SideModal>
         </MainLayout>
     )
 }

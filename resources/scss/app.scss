@@ -11,7 +11,9 @@
     width: 10px;
 }
 
-/* Track */
+::-webkit-scrollbar:horizontal {
+    height: 6px;
+}
 ::-webkit-scrollbar-track {
     background: #e7e7e7;
 }

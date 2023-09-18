@@ -1,13 +1,12 @@
-
-const MultiSelectionTeam = ({ items, title, name, onChange }) => {
+const MultiSelectionTeam = ({items, title, name, onChange}) => {
 
     const teamData = items?.map((teamName, index) => {
         return (
             <div key={`${index}`} className='flex items-center justify-center flex-auto gap-x-5'>
                 <input type="checkbox" name={name} id={teamName} className='peer hidden' value={teamName}
-                    onChange={(e) => onChange(e.target)} />
+                       onChange={(e) => onChange(e.target)}/>
                 <label htmlFor={teamName}
-                    className="peer-checked:bg-blue-light1 min-w-[110px] rounded-lg w-full p-3 font-primary text-center text-sm text-navy-dark-blue bg-gray-light cursor-pointer">{teamName}</label>
+                       className="peer-checked:bg-blue-light1 min-w-[110px] rounded-lg w-full p-3 font-primary text-center text-sm text-navy-dark-blue bg-gray-light cursor-pointer">{teamName}</label>
             </div>
         )
     })

@@ -1,11 +1,12 @@
-import {assets} from '@/assets';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Team from '../shared/team/team';
 import Button from '../shared/button/button';
-import Modal from '../shared/modal/modal';
+import SideModal from '../shared/sideModal/sideModal';
 import MainLayout from '../shared/mainLayout/mainLayout';
 import MultiSelectionTeam from '../shared/multiSelectionTeam/multiSelectionTeam';
 import {useNavigate} from "react-router-dom";
+import AddSection from '../components/addSection';
+import {stopScroll} from '../utils/utils';
 
 const ManageSchool = () => {
     const navigate = useNavigate();
@@ -21,10 +22,13 @@ const ManageSchool = () => {
 
     const [teamLevel, setTeamLevel] = useState([]);
 
+    useEffect(() => {
+        stopScroll(isModalOpen)
+    }, [isModalOpen])
+
+
     const handleLevelChange = (target) => {
-
-        const { value } = target;
-
+        const {value} = target;
         if (target.checked) {
             if (!teamLevel.includes(value)) {
                 setTeamLevel([...teamLevel, value]);
@@ -38,10 +42,6 @@ const ManageSchool = () => {
     const openModal = () => {
         setIsModalOpen(true);
     };
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
-
     // Handle Change team value
     const handleChange = (target) => {
         const {name, value} = target;
@@ -141,7 +141,9 @@ const ManageSchool = () => {
                             />
                         </div>
 
-                        <Modal isOpen={isModalOpen} onClose={closeModal} team={team}/>
+                        <SideModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} title="Manage School">
+                            <AddSection team={team}/>
+                        </SideModal>
 
                     </div>
                 </div>

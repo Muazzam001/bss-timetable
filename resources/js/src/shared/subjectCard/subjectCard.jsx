@@ -21,9 +21,11 @@ const SubjectCard = () => {
                 <div className='flex justify-between w-2/5'>
                     <Badge text={"UnPublished"} bgColor={"bg-blue-medium1/40"} textColor={"text-blue-medium1"}/>
                     <div className='flex gap-x-3 h-10'>
-                        <span className='border-[1.5px] border-gray-medium rounded-full h-8 w-8 flex justify-center items-center'><Edit
+                        <span
+                            className='border-[1.5px] border-gray-medium rounded-full h-8 w-8 flex justify-center items-center'><Edit
                             className="!w-5 !h-5"/></span>
-                        <span className='border-[1.5px] border-gray-medium rounded-full h-8 w-8 flex justify-center items-center'><Delete
+                        <span
+                            className='border-[1.5px] border-gray-medium rounded-full h-8 w-8 flex justify-center items-center'><Delete
                             className="!w-5 !h-5"/></span>
                     </div>
                 </div>

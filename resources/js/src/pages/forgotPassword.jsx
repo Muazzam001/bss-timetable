@@ -1,5 +1,5 @@
 import React from 'react';
-import { assets } from '@/assets';
+import {assets} from '@/assets';
 import ForgotPasswordForm from '@/src/components/auth/forgotPasswordForm';
 import Image from '@/src/shared/image/image';
 import './auth.scss';
@@ -11,11 +11,11 @@ const ForgotPassword = () => {
             <div className='bg-primary-blue w-full'>
                 <div className="auth-wrapper">
                     <div className="auth-img-wrapper">
-                        <Image src={assets.forgotPassword} alt={'Forgot Password icon'} />
+                        <Image src={assets.forgotPassword} alt={'Forgot Password icon'}/>
                     </div>
 
                     <div className='auth-card-wrapper'>
-                        <ForgotPasswordForm />
+                        <ForgotPasswordForm/>
                     </div>
                 </div>
             </div>

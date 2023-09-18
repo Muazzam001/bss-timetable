@@ -1,9 +1,9 @@
 import React from 'react';
-import { assets } from '@/assets';
-import { NavLink } from 'react-router-dom';
+import {assets} from '@/assets';
+import {NavLink} from 'react-router-dom';
 import Image from '../image/image';
 
-const Header2 = ({ headerItem }) => {
+const Header2 = ({headerItem}) => {
 
     // const Menus = [
     //     { title: "Home", src: assets.home },
@@ -16,9 +16,10 @@ const Header2 = ({ headerItem }) => {
 
     const navigation = headerItem && headerItem?.map((navItem, index) => {
         return (
-            <NavLink to="#" key={`${index}`} className="flex flex-col items-center justify-center gap-y-1 hover:bg-blue-light2 w-20 h-20">
+            <NavLink to="#" key={`${index}`}
+                     className="flex flex-col items-center justify-center gap-y-1 hover:bg-blue-light2 w-20 h-20">
                 <div className='w-6 h-6 flex justify-center items-center'>
-                    <Image src={navItem?.src} alt="" className="" style={{ objectFit: "contain", aspectRatio: 2 / 2 }} />
+                    <Image src={navItem?.src} alt="" className="" style={{objectFit: "contain", aspectRatio: 2 / 2}}/>
                 </div>
                 <span className='font-primary text-sm'>{navItem?.title}</span>
             </NavLink>
