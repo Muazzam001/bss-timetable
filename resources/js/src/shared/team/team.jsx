@@ -18,7 +18,6 @@ const Team = ({items, title, name, onChange}) => {
             <div className="border-t-[1.5px] border-gray-medium flex flex-wrap justify-start flex-auto gap-4 p-3">
                 {teamData}
             </div>
-
         </div>
     )
 }
